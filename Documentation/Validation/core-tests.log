@@ -1,0 +1,44 @@
+warning: /Users/yangzheren/Library/org.swift.swiftpm/configuration is not accessible or not writable, disabling user-level cache features.
+warning: /Users/yangzheren/Library/org.swift.swiftpm/security is not accessible or not writable, disabling user-level cache features.
+warning: /Users/yangzheren/Library/Caches/org.swift.swiftpm is not accessible or not writable, disabling user-level cache features.
+warning: 'antiscope': failed storing manifest for 'antiscope' in cache: attempt to write a readonly database
+[0/1] Planning build
+Building for debugging...
+[0/5] Write sources
+[2/5] Write swift-version--58304C5D6DBC2206.txt
+[4/7] Emitting module AntiscopeCore
+[5/7] Compiling AntiscopeCore RouteDisplay.swift
+[6/9] Compiling AntiscopeCoreTests RecordingTests.swift
+[7/9] Emitting module AntiscopeCoreTests
+[7/9] Write Objects.LinkFileList
+[8/9] Linking AntiscopeCorePackageTests
+Build complete! (2.92s)
+Test Suite 'All tests' started at 2026-09-27 10:00:18.942.
+Test Suite 'AntiscopeCorePackageTests.xctest' started at 2026-09-27 10:00:18.945.
+Test Suite 'RecordingTests' started at 2026-09-27 10:00:18.945.
+Test Case '-[AntiscopeCoreTests.RecordingTests testDisplaySamplingPreservesSegmentBoundariesAndOriginalData]' started.
+Test Case '-[AntiscopeCoreTests.RecordingTests testDisplaySamplingPreservesSegmentBoundariesAndOriginalData]' passed (0.020 seconds).
+Test Case '-[AntiscopeCoreTests.RecordingTests testDistanceAtEquatorAndDateline]' started.
+Test Case '-[AntiscopeCoreTests.RecordingTests testDistanceAtEquatorAndDateline]' passed (0.001 seconds).
+Test Case '-[AntiscopeCoreTests.RecordingTests testJournalSurvivesTruncatedTailAndCanResume]' started.
+Test Case '-[AntiscopeCoreTests.RecordingTests testJournalSurvivesTruncatedTailAndCanResume]' passed (0.023 seconds).
+Test Case '-[AntiscopeCoreTests.RecordingTests testPauseExcludesTimeAndDistanceAndCreatesSeparateGPXSegments]' started.
+Test Case '-[AntiscopeCoreTests.RecordingTests testPauseExcludesTimeAndDistanceAndCreatesSeparateGPXSegments]' passed (0.002 seconds).
+Test Case '-[AntiscopeCoreTests.RecordingTests testRejectsInvalidStaleOutOfOrderAndTeleportFixes]' started.
+Test Case '-[AntiscopeCoreTests.RecordingTests testRejectsInvalidStaleOutOfOrderAndTeleportFixes]' passed (0.001 seconds).
+Test Case '-[AntiscopeCoreTests.RecordingTests testSignalGapCreatesSegmentWithoutAddingDistance]' started.
+Test Case '-[AntiscopeCoreTests.RecordingTests testSignalGapCreatesSegmentWithoutAddingDistance]' passed (0.000 seconds).
+Test Case '-[AntiscopeCoreTests.RecordingTests testSlowWalkingAccumulatesRatherThanDiscardingEverySmallStep]' started.
+Test Case '-[AntiscopeCoreTests.RecordingTests testSlowWalkingAccumulatesRatherThanDiscardingEverySmallStep]' passed (0.000 seconds).
+Test Case '-[AntiscopeCoreTests.RecordingTests testUnknownMeasurementsRemainMissingAndDemoIsExplicit]' started.
+Test Case '-[AntiscopeCoreTests.RecordingTests testUnknownMeasurementsRemainMissingAndDemoIsExplicit]' passed (0.001 seconds).
+Test Suite 'RecordingTests' passed at 2026-09-27 10:00:18.996.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.049 (0.051) seconds
+Test Suite 'AntiscopeCorePackageTests.xctest' passed at 2026-09-27 10:00:18.996.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.049 (0.051) seconds
+Test Suite 'All tests' passed at 2026-09-27 10:00:18.996.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.049 (0.054) seconds
+◇ Test run started.
+↳ Testing Library Version: 1501
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "GoogleMaps",
+    "version": "11.2.0",
+    "sha256": "3678d0581cfbdf4dc84546bc55b11defb21ba517656a0fb1cd845d68d01ea4f3"
+  },
+  {
+    "name": "MAMapKit",
+    "version": "11.1.200",
+    "sha256": "d789aee73b32493ca88a42c3981f9f4bb7509b48f7bc74b73def591cff1bf626"
+  },
+  {
+    "name": "AMapFoundationKit",
+    "version": "1.8.7",
+    "sha256": "0c0af716b99d48c15a70280930c7c5eaf174a3e5dcfce834582f95a109f7663f"
+  }
+]
