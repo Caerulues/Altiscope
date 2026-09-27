@@ -14,8 +14,8 @@ struct SettingsView: View {
                 info("moon","锁屏与后台","开始记录后启用后台定位并显示系统定位指示。暂停或结束会停止传感器。系统强制终止、用户划掉应用或设备重启后，需重新打开并继续记录。后台运动采样可能被系统限制。")
                 info("location","精度与方向","原始定位与导出采用 WGS 84。高德显示时通过官方转换接口适配坐标。手机朝向来自指南针，移动方向来自 GPS，两者不一定相同。")
                 VStack(alignment:.leading,spacing:10) {
-                    Text("Antiscope 1.0").font(.system(size:15,weight:.medium))
-                    Text("设计参考 Volanta 的地图中心布局、紫色航迹、详情标签与日志结构。Antiscope 为独立作品，与 Orbx / Volanta 无隶属关系。").font(.system(size:11)).foregroundStyle(Theme.secondary)
+                    Text("Altiscope 1.0").font(.system(size:15,weight:.medium))
+                    Text("设计参考 Volanta 的地图中心布局、紫色航迹、详情标签与日志结构。Altiscope 为独立作品，与 Orbx / Volanta 无隶属关系。").font(.system(size:11)).foregroundStyle(Theme.secondary)
                     Link("Volanta 官方功能介绍",destination:URL(string:"https://volanta.app/features/")!).font(.system(size:12))
                     #if canImport(GoogleMaps)
                     GoogleLegalView()
@@ -74,7 +74,7 @@ struct MapSettingsView: View {
     private func consent(_ provider:MapProvider) -> some View {
         VStack(alignment:.leading,spacing:22) {
             Text("使用 \(provider.title)").font(.system(size:25,weight:.semibold))
-            Text("启用后，地图 SDK 会连接其提供方服务器加载当前可视区域，并按其隐私政策处理网络、设备及地图使用信息。Antiscope 不上传你的完整轨迹日志；地图视口会反映你正在查看的位置。").font(.system(size:15)).foregroundStyle(Theme.secondary)
+            Text("启用后，地图 SDK 会连接其提供方服务器加载当前可视区域，并按其隐私政策处理网络、设备及地图使用信息。Altiscope 不上传你的完整轨迹日志；地图视口会反映你正在查看的位置。").font(.system(size:15)).foregroundStyle(Theme.secondary)
             Link("阅读提供方隐私政策",destination:URL(string:provider == .google ? "https://policies.google.com/privacy" : "https://lbs.amap.com/pages/privacy/")!)
             Link("阅读服务条款",destination:URL(string:provider == .google ? "https://cloud.google.com/maps-platform/terms" : "https://lbs.amap.com/pages/terms/")!)
             Button { if provider == .google { preferences.consentGoogle = true } else { preferences.consentAMap = true }; preferences.provider = provider; pending = nil } label: { Text("同意并启用地图").frame(maxWidth:.infinity).padding(16) }.buttonStyle(PrimaryButton())

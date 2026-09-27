@@ -466,7 +466,7 @@
 		"D029EC6A08426A76C31D985E" = {
 			"isa" = "PBXFileReference";
 			"lastKnownFileType" = "sourcecode.swift";
-			"path" = "AntiscopeApp.swift";
+			"path" = "AltiscopeApp.swift";
 			"sourceTree" = "<group>";
 		};
 		"D0D4B9AE0805A7F61306E5DC" = {
@@ -644,13 +644,13 @@
 		};
 		"8133BF904E34AD73721D60DB" = {
 			"isa" = "PBXFileReference";
-			"path" = "Antiscope-DAA49D3D.gpx";
+			"path" = "Altiscope-DAA49D3D.gpx";
 			"sourceTree" = "<group>";
 			"lastKnownFileType" = "text.xml";
 		};
 		"530E60D9CA688621217FAB9F" = {
 			"isa" = "PBXFileReference";
-			"path" = "Antiscope-DAA49D3D.json";
+			"path" = "Altiscope-DAA49D3D.json";
 			"sourceTree" = "<group>";
 			"lastKnownFileType" = "text.json";
 		};
@@ -712,7 +712,7 @@
 		"F92A643C16073942E8D5F8CC" = {
 			"isa" = "PBXGroup";
 			"children" = ("730731D6C64A82DE3EBD56CD", "C69D003D4C4F516F2453CE25", "70DD3EDE7F62CC99F326947D", "D0D4B9AE0805A7F61306E5DC");
-			"path" = "AntiscopeCore";
+			"path" = "AltiscopeCore";
 			"sourceTree" = "<group>";
 		};
 		"5B2A96A965D59BD6C05185E1" = {
@@ -785,7 +785,7 @@
 		"35147F4E8A2F0A90CF71312B" = {
 			"isa" = "PBXGroup";
 			"children" = ("2738B33F524CB0A316855E08");
-			"path" = "AntiscopeCoreTests";
+			"path" = "AltiscopeCoreTests";
 			"sourceTree" = "<group>";
 		};
 		"FE768745107DEAE8BECC63F0" = {

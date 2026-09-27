@@ -21,7 +21,7 @@ struct RootView: View {
         .sheet(isPresented: Binding(get: { recorder.shareURL != nil }, set: { if !$0 { recorder.shareURL = nil } })) {
             if let url = recorder.shareURL { ShareSheet(url: url).presentationDetents([.medium,.large]) }
         }
-        .alert("Antiscope", isPresented: Binding(get: { recorder.message != nil },set:{ if !$0 { recorder.message = nil } })) {
+        .alert("Altiscope", isPresented: Binding(get: { recorder.message != nil },set:{ if !$0 { recorder.message = nil } })) {
             Button("知道了",role:.cancel) { recorder.message = nil }
             if recorder.authorization == .denied { Button("打开系统设置") { if let url = URL(string:UIApplication.openSettingsURLString) { UIApplication.shared.open(url) } } }
         } message: { Text(recorder.message ?? "") }
@@ -29,7 +29,7 @@ struct RootView: View {
     private var header: some View {
         HStack(spacing: 10) {
             ZStack { RoundedRectangle(cornerRadius:10).fill(Theme.purple.opacity(0.18)).frame(width:35,height:35); Image(systemName:"location.north.line.fill").font(.system(size:21)).foregroundStyle(Theme.accent).rotationEffect(.degrees(25)) }
-            VStack(alignment:.leading,spacing:2) { Text("Antiscope").font(.system(size:20,weight:.semibold,design:.rounded)); Text("YOUR JOURNEY, RECORDED").font(.system(size:7,weight:.medium,design:.monospaced)).tracking(1.8).foregroundStyle(Theme.secondary) }
+            VStack(alignment:.leading,spacing:2) { Text("Altiscope").font(.system(size:20,weight:.semibold,design:.rounded)); Text("YOUR JOURNEY, RECORDED").font(.system(size:7,weight:.medium,design:.monospaced)).tracking(1.8).foregroundStyle(Theme.secondary) }
             Spacer()
             StatusPill(text: recorder.isRecording ? "记录中" : recorder.active?.state == .paused ? "已暂停" : "本地存储",color:recorder.isRecording ? Theme.mint : Theme.accent)
         }.padding(.horizontal,20).padding(.top,8).padding(.bottom,14).background(Theme.background)

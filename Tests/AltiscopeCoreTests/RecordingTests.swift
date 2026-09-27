@@ -1,5 +1,5 @@
 import XCTest
-@testable import AntiscopeCore
+@testable import AltiscopeCore
 
 final class RecordingTests: XCTestCase {
     let date = Date(timeIntervalSince1970:10000)

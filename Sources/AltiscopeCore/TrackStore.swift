@@ -92,7 +92,7 @@ public final class TrackStore {
     }
     public func writeExport(_ session: TrackSession, gpx: Bool, to directory: URL) throws -> URL {
         try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
-        let file = directory.appendingPathComponent("Antiscope-\(session.id.uuidString.prefix(8))").appendingPathExtension(gpx ? "gpx" : "json")
+        let file = directory.appendingPathComponent("Altiscope-\(session.id.uuidString.prefix(8))").appendingPathExtension(gpx ? "gpx" : "json")
         let data = try gpx ? Data(TrackExport.gpx(session).utf8) : encoder.encode(session)
         try data.write(to: file, options: .atomic)
         return file

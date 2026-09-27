@@ -1,52 +1,11 @@
-2026-09-27 10:03:25.568 xcodebuild[98820:53346211]  DVTFilePathFSEvents: Failed to start fs event stream.
-2026-09-27 10:03:26.525 xcodebuild[98820:53346182] [MT] DVTDeveloperPaths: Failed to get length of DARWIN_USER_CACHE_DIR from confstr(3), error = Error Domain=NSPOSIXErrorDomain Code=5 "Input/output error". Using NSCachesDirectory instead.
-2026-09-27 10:03:28.704 xcodebuild[98820:53346789] CoreSimulatorService connection became invalid.  Simulator services will no longer be available.
-2026-09-27 10:03:28.705 xcodebuild[98820:53346792] Logging connecton invalid: <OS_xpc_error: <dictionary: 0x1facbec60> { count = 1, transaction: 0, voucher = 0x0, contents =
-	"XPCErrorDescription" => <string: 0x1facbeda8> { length = 18, contents = "Connection invalid" }
-}>
-2026-09-27 10:03:28.705 xcodebuild[98820:53346792] Error opening log file (/Users/yangzheren/Library/Logs/CoreSimulator/CoreSimulator.com.apple.dt.xcodebuild.log): Operation not permitted
-[-[SimServiceContext sendRequest:]:1763] ERROR : Unable to deliver request ({
-    "developer_dir" = "/Applications/Xcode.app/Contents/Developer";
-    request = "set_developer_dir";
-}) because we are not connected to CoreSimulatorService.
 Command line invocation:
-    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Antiscope.xcodeproj -scheme Antiscope -configuration Debug -sdk iphonesimulator -destination "generic/platform=iOS Simulator" -derivedDataPath /private/tmp/AntiscopeDerivedData CODE_SIGNING_ALLOWED=NO ARCHS=arm64 build
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Altiscope.xcodeproj -scheme Altiscope -configuration Debug -sdk iphonesimulator -destination "generic/platform=iOS Simulator" -derivedDataPath /private/tmp/AltiscopeDerivedData CODE_SIGNING_ALLOWED=NO ARCHS=arm64 build
 
 Build settings from command line:
     ARCHS = arm64
     CODE_SIGNING_ALLOWED = NO
     SDKROOT = iphonesimulator26.2
 
-2026-09-27 10:03:29.102 xcodebuild[98820:53346182] [MT] DVTAssertions: Warning in DVTFrameworks/DVTFoundation/FileTypes/DVTFileDataTypeDetection.m:79
-Details:  detectedTypeIdentifier (com.apple.xml-property-list) does not conform to matchedTypeIdentifier in MagicFileDataTypeDetector extenson com.apple.property-list. When both are specified, this conformance is required unless overridden by setting allowNonInheritance. extension.identifier:Xcode.MagicFileDataTypeDetector.XMLPlist
-Object:   <DVTFileDataTypeDetectionMagicCache: 0x1182c1540>
-Method:   -initWithExtension:
-Thread:   <_NSMainThread: 0x155906d40>{number = 1, name = main}
-Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
-2026-09-27 10:03:29.117 xcodebuild[98820:53346182] [MT] DVTAssertions: Warning in DVTFrameworks/DVTFoundation/FileTypes/DVTFileDataTypeDetection.m:79
-Details:  detectedTypeIdentifier (com.apple.binary-property-list) does not conform to matchedTypeIdentifier in MagicFileDataTypeDetector extenson com.apple.property-list. When both are specified, this conformance is required unless overridden by setting allowNonInheritance. extension.identifier:Xcode.MagicFileDataTypeDetector.BinaryPlist
-Object:   <DVTFileDataTypeDetectionMagicCache: 0x118344cd0>
-Method:   -initWithExtension:
-Thread:   <_NSMainThread: 0x155906d40>{number = 1, name = main}
-Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
-[-[SimServiceContext initWithDeveloperDir:connectionType:error:]:450] WARN  : Unable to discover any Simulator runtimes. Developer Directory is /Applications/Xcode.app/Contents/Developer.
-[-[SimServiceContext sendRequest:reply:error:]:1783] ERROR : Unable to deliver request ({
-    request = "notification_subscription";
-    "set_path" = "/Users/yangzheren/Library/Developer/CoreSimulator/Devices";
-}) because we are not connected to CoreSimulatorService.
-2026-09-27 10:03:29.396 xcodebuild[98820:53346792] Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}
-[-[SimServiceContext initWithDeveloperDir:connectionType:error:]_block_invoke:486] ERROR : Could not get list of trusted mount directories: Error Domain=com.apple.CoreSimulator.SimError Code=410 "The service used to manage runtime disk images (simdiskimaged) crashed or is not responding" UserInfo={NSLocalizedDescription=The service used to manage runtime disk images (simdiskimaged) crashed or is not responding}
-[-[SimDiskImageManager _onQueue_checkConnection:]:239] ERROR : simdiskimaged returned error (invalid), marking disconnected.
-[-[SimDiskImageManager init]:175] ERROR : Could not kickstart simdiskimaged; SimDiskImageManager services will not be available: Error Domain=NSPOSIXErrorDomain Code=53 "Software caused connection abort" UserInfo={NSLocalizedDescription=Error returned in reply from CoreSimulatorService: Connection invalid}
-[-[SimDiskImageManager _onQueue_checkConnection:]:239] ERROR : simdiskimaged returned error (invalid), marking disconnected.
-2026-09-27 10:03:29.400 xcodebuild[98820:53346792]  iOSSimulator: [SimServiceContext defaultDeviceSetWithError:] returned nil (Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedFailureReason=Failed to subscribe to notifications from CoreSimulatorService., NSLocalizedDescription=Failed to initialize simulator device set., NSUnderlyingError=0x11834b890 {Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}}}). Simulator device support disabled.
-[-[SimServiceContext sendRequest:reply:error:]:1783] ERROR : Unable to deliver request ({
-    request = "notification_subscription";
-    "set_path" = "/Users/yangzheren/Library/Developer/CoreSimulator/Devices";
-}) because we are not connected to CoreSimulatorService.
-2026-09-27 10:03:29.412 xcodebuild[98820:53346213] Error Domain=NSPOSIXErrorDomain Code=61 "Connection refused" UserInfo={NSLocalizedDescription=CoreSimulatorService connection became invalid.  Simulator services will no longer be available.}
-2026-09-27 10:03:29.416 xcodebuild[98820:53346213]  IDESimulatorAvailability: startObservingSimulatorUpdates() FAILED to register SimDeviceSet observer
-2026-09-27 10:03:31.473 xcodebuild[98820:53346790] XPC error for connection com.apple.backupd.sandbox.xpc: Connection invalid
 ComputePackagePrebuildTargetDependencyGraph
 
 Prepare packages
@@ -60,7 +19,7 @@ CreateBuildOperation
 ComputeTargetDependencyGraph
 note: Building targets in dependency order
 note: Target dependency graph (1 target)
-    Target 'Antiscope' in project 'Antiscope' (no dependencies)
+    Target 'Altiscope' in project 'Altiscope' (no dependencies)
 
 GatherProvisioningInputs
 
@@ -68,7 +27,7 @@ CreateBuildDescription
 
 ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -x c -c /dev/null
 
-ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Resources/Assets.xcassets
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/Assets.xcassets
 
 ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
 
@@ -76,126 +35,478 @@ ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeD
 
 ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
 
-Build description signature: 5afcbeb4d0b162be775f74fa286444eb
-Build description path: /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/XCBuildData/5afcbeb4d0b162be775f74fa286444eb.xcbuilddata
-ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk /tmp/AntiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/Antiscope.xcodeproj
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -o /tmp/AntiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
-Failed to create FS event stream. Considering the cache up-to-date.
+Build description signature: 88d1959ea288ad3f1c756e239d3b595c
+Build description path: /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/XCBuildData/88d1959ea288ad3f1c756e239d3b595c.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk /tmp/AltiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-dc75598d0054f22ec865fa860f139d727d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -o /tmp/AltiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-dc75598d0054f22ec865fa860f139d727d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache
 
-WriteAuxiliaryFile /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftFileList (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    write-file /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftFileList
+CreateBuildDirectory /tmp/AltiscopeDerivedData/Build/Products
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/AltiscopeDerivedData/Build/Products
 
-WriteAuxiliaryFile /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftConstValuesFileList (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    write-file /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftConstValuesFileList
+CreateBuildDirectory /tmp/AltiscopeDerivedData/Build/Intermediates.noindex
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/AltiscopeDerivedData/Build/Intermediates.noindex
 
-WriteAuxiliaryFile /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.LinkFileList (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    write-file /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.LinkFileList
+CreateBuildDirectory /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator
 
-WriteAuxiliaryFile /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-OutputFileMap.json (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    write-file /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-OutputFileMap.json
+CreateBuildDirectory /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
 
-CpResource /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/PrivacyInfo.xcprivacy /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Resources/PrivacyInfo.xcprivacy (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Resources/PrivacyInfo.xcprivacy /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app
+CreateBuildDirectory /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/ExplicitPrecompiledModules
 
-ProcessInfoPlistFile /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Info.plist /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Resources/Info.plist (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-infoPlistUtility /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Resources/Info.plist -producttype com.apple.product-type.application -genpkginfo /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/assetcatalog_generated_info.plist -o /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Info.plist
+CreateBuildDirectory /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
 
-SwiftDriver Antiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Antiscope -Onone -enforce-exclusivity\=checked @/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/AntiscopeDerivedData/Index.noindex/DataStore -swift-version 5 -I /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -F /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/AntiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -output-file-map /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/AntiscopeDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-generated-files.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-own-target-headers.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-project-headers.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources/arm64 -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-Swift.h -working-directory /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope -experimental-emit-module-separately -disable-cmo
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope-d98a0acb52c70d6f0eddc06e25ba65d9-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope-d98a0acb52c70d6f0eddc06e25ba65d9-VFS-iphonesimulator/all-product-headers.yaml
 
-SwiftEmitModule normal arm64 Emitting\ module\ for\ Antiscope (in target 'Antiscope' from project 'Antiscope')
+ProcessXCFramework /Users/yangzheren/XcodeProjects/Altiscope/Vendor/Google/GoogleMaps.xcframework /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/GoogleMaps.a ios simulator
+    cd /Users/yangzheren/XcodeProjects/Altiscope/Altiscope.xcodeproj
+    builtin-process-xcframework --xcframework /Users/yangzheren/XcodeProjects/Altiscope/Vendor/Google/GoogleMaps.xcframework --platform ios --environment simulator --target-path /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator
 
-EmitSwiftModule normal arm64 (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.hmap
 
-SwiftCompile normal arm64 Compiling\ Recorder.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Services/Recorder.swift (in target 'Antiscope' from project 'Antiscope')
-SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Services/Recorder.swift (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList
 
-SwiftCompile normal arm64 Compiling\ RouteDisplay.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/Sources/AntiscopeCore/RouteDisplay.swift (in target 'Antiscope' from project 'Antiscope')
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json
 
-SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/Sources/AntiscopeCore/RouteDisplay.swift (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json
 
-SwiftCompile normal arm64 Compiling\ TrackerView.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Views/TrackerView.swift (in target 'Antiscope' from project 'Antiscope')
-SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Views/TrackerView.swift (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.DependencyStaticMetadataFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.DependencyStaticMetadataFileList
 
-SwiftCompile normal arm64 Compiling\ RouteMapView.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Maps/RouteMapView.swift (in target 'Antiscope' from project 'Antiscope')
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftConstValuesFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftConstValuesFileList
 
-SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope/App/Maps/RouteMapView.swift (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.LinkFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.LinkFileList
 
-SwiftDriverJobDiscovery normal arm64 Compiling RouteDisplay.swift (in target 'Antiscope' from project 'Antiscope')
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.DependencyMetadataFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.DependencyMetadataFileList
 
-SwiftDriverJobDiscovery normal arm64 Emitting module for Antiscope (in target 'Antiscope' from project 'Antiscope')
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-project-headers.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-project-headers.hmap
 
-SwiftDriver\ Compilation\ Requirements Antiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Antiscope -Onone -enforce-exclusivity\=checked @/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/AntiscopeDerivedData/Index.noindex/DataStore -swift-version 5 -I /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -F /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/AntiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -output-file-map /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/AntiscopeDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-generated-files.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-own-target-headers.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-project-headers.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources/arm64 -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-Swift.h -working-directory /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope -experimental-emit-module-separately -disable-cmo
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-own-target-headers.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-own-target-headers.hmap
 
-Copy /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.swiftmodule/arm64-apple-ios-simulator.swiftmodule /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftmodule (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftmodule /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-generated-files.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-generated-files.hmap
 
-Copy /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.swiftmodule/arm64-apple-ios-simulator.swiftdoc /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftdoc (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftdoc /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-all-target-headers.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-all-target-headers.hmap
 
-Copy /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.abi.json (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.abi.json /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.swiftmodule/arm64-apple-ios-simulator.abi.json
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-all-non-framework-target-headers.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-all-non-framework-target-headers.hmap
 
-Copy /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftsourceinfo (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftsourceinfo /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-DebugDylibPath-normal-arm64.txt (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-DebugDylibPath-normal-arm64.txt
 
-SwiftDriverJobDiscovery normal arm64 Compiling RouteMapView.swift (in target 'Antiscope' from project 'Antiscope')
+WriteAuxiliaryFile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-DebugDylibInstallName-normal-arm64.txt (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    write-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-DebugDylibInstallName-normal-arm64.txt
 
-SwiftDriverJobDiscovery normal arm64 Compiling Recorder.swift (in target 'Antiscope' from project 'Antiscope')
+MkDir /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /bin/mkdir -p /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app
 
-SwiftDriverJobDiscovery normal arm64 Compiling TrackerView.swift (in target 'Antiscope' from project 'Antiscope')
+Ld /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/__preview.dylib normal (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.6-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -Os -L/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -F/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -install_name @rpath/Altiscope.debug.dylib -dead_strip -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_dependency_info.dat -o /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/__preview.dylib
 
-SwiftDriver\ Compilation Antiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Antiscope -Onone -enforce-exclusivity\=checked @/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -target arm64-apple-ios17.0-simulator -g -module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/AntiscopeDerivedData/Index.noindex/DataStore -swift-version 5 -I /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -F /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/AntiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-7d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -output-file-map /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/AntiscopeDerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/AntiscopeDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-generated-files.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-own-target-headers.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-project-headers.hmap -Xcc -I/tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources/arm64 -Xcc -I/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-Swift.h -working-directory /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope -experimental-emit-module-separately -disable-cmo
+CpResource /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/PrivacyInfo.xcprivacy /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/PrivacyInfo.xcprivacy (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/PrivacyInfo.xcprivacy /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app
 
-Ld /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Antiscope.debug.dylib normal (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -Os -L/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -F/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -filelist /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.LinkFileList -install_name @rpath/Antiscope.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.swiftmodule @/tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope-linker-args.resp -ObjC -lc++ -lz -lsqlite3 -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -framework Accelerate -framework Contacts -framework CoreData -framework CoreGraphics -framework CoreImage -framework CoreLocation -framework CoreMotion -framework CoreTelephony -framework CoreText -framework GLKit -framework ImageIO -framework Metal -framework OpenGLES -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit -framework MetricKit -framework MapKit -framework Network /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/GoogleMaps.a -o /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Antiscope.debug.dylib
+CpResource /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/GoogleMaps.bundle /Users/yangzheren/XcodeProjects/Altiscope/Vendor/Google/Distribution/Maps/Resources/GoogleMapsResources/GoogleMaps.bundle (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/yangzheren/XcodeProjects/Altiscope/Vendor/Google/Distribution/Maps/Resources/GoogleMapsResources/GoogleMaps.bundle /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app
 
-ConstructStubExecutorLinkFileList /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-ExecutorLinkFileList-normal-arm64.txt (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    construct-stub-executor-link-file-list /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Antiscope.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-ExecutorLinkFileList-normal-arm64.txt
-note: Using stub executor library with Swift entry point. (in target 'Antiscope' from project 'Antiscope')
+CpResource /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/AMap.bundle /Users/yangzheren/XcodeProjects/Altiscope/Vendor/AMap/MAMapKit.framework/AMap.bundle (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/yangzheren/XcodeProjects/Altiscope/Vendor/AMap/MAMapKit.framework/AMap.bundle /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app
 
-Ld /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Antiscope normal (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.0-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -Os -L/tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -F/tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope-ExecutorLinkFileList-normal-arm64.txt /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Antiscope.debug.dylib -o /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Antiscope
+MkDir /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/unthinned (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /bin/mkdir -p /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/unthinned
 
-CopySwiftLibs /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Antiscope.debug.dylib --scan-folder /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Frameworks --scan-folder /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/PlugIns --scan-folder /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/SystemExtensions --scan-folder /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Extensions --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Accelerate.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Contacts.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreData.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreGraphics.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreImage.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreLocation.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreMotion.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreTelephony.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreText.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/GLKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/ImageIO.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Metal.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/OpenGLES.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/QuartzCore.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Security.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/SystemConfiguration.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/UIKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/MetricKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/MapKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Network.framework --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+MkDir /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/thinned (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /bin/mkdir -p /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/Assets.xcassets (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/Assets.xcassets --compile /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_dependencies --output-partial-info-plist /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_generated_info.plist --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region zh-Hans --target-device iphone --target-device ipad --minimum-deployment-target 17.6 --platform iphonesimulator --bundle-identifier name.zherenyang.Altiscope --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/GeneratedAssetSymbols.h
+/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/Assets.xcassets (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/Assets.xcassets --compile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_dependencies_thinned --output-partial-info-plist /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region zh-Hans --target-device iphone --target-device ipad --minimum-deployment-target 17.6 --platform iphonesimulator
+/* com.apple.actool.compilation-results */
+/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_generated_info.plist_thinned
+/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver Altiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Altiscope -Onone -enforce-exclusivity\=checked @/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -target arm64-apple-ios17.6-simulator -g -module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/AltiscopeDerivedData/Index.noindex/DataStore -swift-version 5 -I /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -F /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/AltiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-dc75598d0054f22ec865fa860f139d727d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -output-file-map /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/AltiscopeDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-generated-files.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-own-target-headers.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-project-headers.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/arm64 -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h -working-directory /Users/yangzheren/XcodeProjects/Altiscope -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/ptrauth-VSJ3ENK7HCL0WHQ9R3ZO3ZN6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_stdarg-DYRU6KSHRPAQ2A6QC8U9EZJAX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/DeveloperToolsSupport-AIT4G505AW5VH0AODBKCIKROH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_SwiftConcurrencyShims-1FPYW50E14RQWMUUFF62KY3V3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_stddef-QN1T3VO1MCPZYF3YZAYM9MBZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/ptrcheck-A3TPN6MZIFU5XH775MQTFC4ZS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_AvailabilityInternal-A1NDFPBPZULWJW9RJ9NKLRADT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/SwiftShims-5ZIBLX6KZXGPQKI2FYV5R77AY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_float-34DKTBS1SM0Z6DF4JSAR2D3KV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_stdbool-A4HD6E4PYKDN6NPNLYTFV4OYJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_DarwinFoundation1-4GR8NX53V259K6XES7M23NSSI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_DarwinFoundation2-CHE2ZGOLIJXF8138F4L4QH7CN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_limits-AM9MRFPL4TE2791D8VJ08OXI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/sys_types-6IUFJBGMGTL875VFPZE4TWB47.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_tgmath-CTV4LF3NAAMR48RMMML4OJ42H.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_stdint-4QYUBZLFOMJYUF4A8K53PTEAU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_DarwinFoundation3-BDW4A2LOQP9FJ6XTBC37V75X6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_stdatomic-7ZD74QAXFWDSJ24NX9088BES3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_intrinsics-ATCYHSG22NFH6KQLP4OEV6FVV.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_Builtin_inttypes-BV29CJ7A7RWJ5ARILXSS1NBC5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Darwin-7IBNOKRYJRF3UV7HZ34Q66O8V.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/simd-EUN2SHUPT1IPY9W4CQY28P1MM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/MachO-34CY45HS0OF8NJ4ZV5OEYV2T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/ObjectiveC-DK27TK6K3Q73L8SYN5PWWJWW0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/os_object-X8ZM32CG7B20VSXOS5NM2UTT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/os_workgroup-49MWAZBT3QLPB65Z8OEGWUIK8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Spatial-71NK8G6HWQX1BW8DQTO0VU3TZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Dispatch-69QRU0ZUW1ZSCUW912B8IE2YK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreFoundation-2SEW0HUSQZ6NKH6XZ714CSE8W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/XPC-1ACEFOBIXFSJSYLPRWJB6WNJ6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/dnssd-88XH0ILL0DSACTVE6CCWL7VN5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/os-2NVMBIE2WKPX05TYH0UGXUXGJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Security-63EU58Z8DG0Y8I6GZFBPLIRXZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreGraphics-5P1GMYF9G57EO0NF4B5V4GU77.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CFNetwork-7HWSHAWKRH6BFHS1OCS9RGLV6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Foundation-AFAZNEQV3ZIFWXRUY5CJQ8NN3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreText-1DJ8KUU8M6Q6SGGIS8ZRJBN5L.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/ImageIO-MOZ7KYQJLA2AWJ0B3HUH5ZJU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/FileProvider-214MWJVGCWW8ML1Q2L9GOL4CG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/UserNotifications-5N4GNDXPJG6H9O8BEK0OC4ZFU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/OSLog-99PVBMVOUEYQ3ZHCYE202FV7R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/UniformTypeIdentifiers-7X773O69EFFGE8Z5HHHB21ITJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/_LocationEssentials-AG3NIAYY1Y9MB8MQAZLNRON5O.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreData-6WO2F6E3ZHNXO0NK4BKOCOB1L.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/DataDetection-CE0JJEGZ4SXF095XTHNCQ2SSJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/IOSurface-EUUIG0OI71LKBBDWYBTQFABL1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreTransferable-DR5ZCBP83YRW0JOAAWO18B4Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/OpenGLES-EHB9QV1VFRREABX8HWYCZ0LCC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Network-5OGUVG9JRJK3V0XNBU4ILKIH1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreLocation-BQV5QO4X3WNOTSCCIZZBFRFYW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/UIUtilities-XYTXDCQJ6HK29Y8EYWS0P5IY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Symbols-AM6F1AHMX5HQF6FM1U4W3CGCA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Metal-D1B4CAIKALMG2XIVKV93QYDYR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/Accessibility-25A8ZL0UDWKS77J7GYQJVPIU2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreMotion-7C5TL624S1P684LTT3JQ9IEOZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreVideo-7LFAGFK81339SVUQVWWADVVE0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/QuartzCore-5NILZ4FP1MM4F1R9W1F1PYH1S.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/CoreImage-1QNFR1K8ISJPHZ41H3UL6SWMY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/SwiftUICore-94FC01S52HVLIW2IOITH7S714.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/UIKit-5I3EZ9K1EQESICHBLT1ARW27F.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/SwiftUI-CK0QDI1WRZ1P309JVAF0WCBI2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/GoogleMaps-BDWZRB9599SOI3CMN88718Q2L.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/AltiscopeDerivedData/ModuleCache.noindex/MapKit-DI5CRIWLZY2BH0NY2WTBX9MVD.pcm
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ Altiscope (in target 'Altiscope' from project 'Altiscope')
+
+EmitSwiftModule normal arm64 (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ GeneratedAssetSymbols.swift /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'Altiscope' from project 'Altiscope')
+SwiftCompile normal arm64 /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ Models.swift,\ RouteDisplay.swift /Users/yangzheren/XcodeProjects/Altiscope/Sources/AltiscopeCore/Models.swift /Users/yangzheren/XcodeProjects/Altiscope/Sources/AltiscopeCore/RouteDisplay.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/Sources/AltiscopeCore/Models.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/Sources/AltiscopeCore/RouteDisplay.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ JournalView.swift,\ RootView.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Views/JournalView.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Views/RootView.swift (in target 'Altiscope' from project 'Altiscope')
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Views/JournalView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Views/RootView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ TrackStore.swift /Users/yangzheren/XcodeProjects/Altiscope/Sources/AltiscopeCore/TrackStore.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/Sources/AltiscopeCore/TrackStore.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ Recorder.swift,\ InstrumentsView.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Services/Recorder.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Views/InstrumentsView.swift (in target 'Altiscope' from project 'Altiscope')
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Services/Recorder.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Views/InstrumentsView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ TrackerView.swift,\ DemoRoute.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Views/TrackerView.swift /Users/yangzheren/XcodeProjects/Altiscope/Sources/AltiscopeCore/DemoRoute.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Views/TrackerView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/Sources/AltiscopeCore/DemoRoute.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ GoogleRouteMap.swift,\ MapPreferences.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/GoogleRouteMap.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/MapPreferences.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/GoogleRouteMap.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/MapPreferences.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ AltiscopeApp.swift,\ AMapRouteMap.swift /Users/yangzheren/XcodeProjects/Altiscope/App/AltiscopeApp.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/AMapRouteMap.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/AltiscopeApp.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/AMapRouteMap.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 Compiling\ OfflineCanvas.swift,\ RouteMapView.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/OfflineCanvas.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/RouteMapView.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/OfflineCanvas.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Maps/RouteMapView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for Altiscope (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriver\ Compilation\ Requirements Altiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Altiscope -Onone -enforce-exclusivity\=checked @/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -target arm64-apple-ios17.6-simulator -g -module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/AltiscopeDerivedData/Index.noindex/DataStore -swift-version 5 -I /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -F /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/AltiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-dc75598d0054f22ec865fa860f139d727d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -output-file-map /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/AltiscopeDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-generated-files.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-own-target-headers.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-project-headers.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/arm64 -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h -working-directory /Users/yangzheren/XcodeProjects/Altiscope -experimental-emit-module-separately -disable-cmo
+
+LinkAssetCatalog /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/Assets.xcassets (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-linkAssetCatalog --thinned /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/thinned --thinned-dependencies /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_generated_info.plist_thinned --unthinned /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_output/unthinned --unthinned-dependencies /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_generated_info.plist_unthinned --output /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app --plist-output /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_generated_info.plist
+note: Emplaced /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/AppIcon60x60@2x.png (in target 'Altiscope' from project 'Altiscope')
+note: Emplaced /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/AppIcon76x76@2x~ipad.png (in target 'Altiscope' from project 'Altiscope')
+note: Emplaced /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Assets.car (in target 'Altiscope' from project 'Altiscope')
+
+SwiftMergeGeneratedHeaders /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/Altiscope-Swift.h /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-swiftHeaderTool -arch arm64 /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h -o /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/Altiscope-Swift.h
+
+Copy /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.swiftmodule/arm64-apple-ios-simulator.swiftmodule /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.swiftmodule/arm64-apple-ios-simulator.swiftdoc /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftdoc (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftdoc /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.swiftmodule/arm64-apple-ios-simulator.abi.json /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.abi.json (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.abi.json /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftsourceinfo (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftsourceinfo /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+ProcessInfoPlistFile /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Info.plist /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/Info.plist (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-infoPlistUtility /Users/yangzheren/XcodeProjects/Altiscope/App/Resources/Info.plist -producttype com.apple.product-type.application -genpkginfo /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/assetcatalog_generated_info.plist -o /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Info.plist
+
+SwiftCompile normal arm64 Compiling\ SettingsView.swift,\ Theme.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Views/SettingsView.swift /Users/yangzheren/XcodeProjects/Altiscope/App/Views/Theme.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Views/SettingsView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftCompile normal arm64 /Users/yangzheren/XcodeProjects/Altiscope/App/Views/Theme.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+
+
+SwiftDriverJobDiscovery normal arm64 Compiling Models.swift, RouteDisplay.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling GeneratedAssetSymbols.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling TrackStore.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling AltiscopeApp.swift, AMapRouteMap.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling JournalView.swift, RootView.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling GoogleRouteMap.swift, MapPreferences.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling OfflineCanvas.swift, RouteMapView.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling SettingsView.swift, Theme.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling TrackerView.swift, DemoRoute.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling Recorder.swift, InstrumentsView.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriver\ Compilation Altiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Altiscope -Onone -enforce-exclusivity\=checked @/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -target arm64-apple-ios17.6-simulator -g -module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -index-store-path /tmp/AltiscopeDerivedData/Index.noindex/DataStore -swift-version 5 -I /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -F /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -emit-localized-strings -emit-localized-strings-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/AltiscopeDerivedData/SDKStatCaches.noindex/iphonesimulator26.2-23C57-dc75598d0054f22ec865fa860f139d727d00a8b37fbd7999ea79df8ebc024bf0.sdkstatcache -output-file-map /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -sdk-module-cache-path /tmp/AltiscopeDerivedData/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/AltiscopeDerivedData/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-generated-files.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-own-target-headers.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-project-headers.hmap -Xcc -I/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/include -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources/arm64 -Xcc -I/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h -working-directory /Users/yangzheren/XcodeProjects/Altiscope -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Altiscope.debug.dylib normal (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.6-simulator -dynamiclib -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -Os -L/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -F/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -filelist /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.LinkFileList -install_name @rpath/Altiscope.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_lto.o -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule @/tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope-linker-args.resp -ObjC -lc++ -lz -lsqlite3 -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -framework Accelerate -framework Contacts -framework CoreData -framework CoreGraphics -framework CoreImage -framework CoreLocation -framework CoreMotion -framework CoreTelephony -framework CoreText -framework GLKit -framework ImageIO -framework Metal -framework OpenGLES -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit -framework MetricKit -framework MapKit -framework Network /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/GoogleMaps.a -o /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Altiscope.debug.dylib
+
+ConstructStubExecutorLinkFileList /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-ExecutorLinkFileList-normal-arm64.txt (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    construct-stub-executor-link-file-list /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Altiscope.debug.dylib /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'Altiscope' from project 'Altiscope')
+
+Ld /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Altiscope normal (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.6-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk -Os -L/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -F/tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -rdynamic -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope-ExecutorLinkFileList-normal-arm64.txt /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Altiscope.debug.dylib -o /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Altiscope
+
+CopySwiftLibs /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Altiscope.debug.dylib --scan-folder /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Frameworks --scan-folder /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/PlugIns --scan-folder /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/SystemExtensions --scan-folder /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Extensions --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Accelerate.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Contacts.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreData.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreGraphics.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreImage.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreLocation.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreMotion.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreTelephony.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/CoreText.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/GLKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/ImageIO.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Metal.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/OpenGLES.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/QuartzCore.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Security.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/SystemConfiguration.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/UIKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/MetricKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/MapKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk/System/Library/Frameworks/Network.framework --platform iphonesimulator --toolchain /Users/yangzheren/Library/Developer/DVTDownloads/MetalToolchain/mounts/058e1b31129b642e40598a87b55aa54b2a29e538/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
 Ignoring --strip-bitcode because --sign was not passed
 
-ExtractAppIntentsMetadata (in target 'Antiscope' from project 'Antiscope')
-    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/Antiscope
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name Antiscope --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk --xcode-version 17C529 --platform-family iOS --deployment-target 17.0 --bundle-identifier app.antiscope.tracker --output /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app --target-triple arm64-apple-ios17.0-simulator --binary-file /tmp/AntiscopeDerivedData/Build/Products/Debug-iphonesimulator/Antiscope.app/Antiscope --dependency-file /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope_dependency_info.dat --stringsdata-file /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftFileList --metadata-file-list /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope.DependencyMetadataFileList --static-metadata-file-list /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Antiscope.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/AntiscopeDerivedData/Build/Intermediates.noindex/Antiscope.build/Debug-iphonesimulator/Antiscope.build/Objects-normal/arm64/Antiscope.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
-2026-09-27 10:04:55.565 appintentsmetadataprocessor[98928:53355452] Starting appintentsmetadataprocessor export
-2026-09-27 10:04:55.609 appintentsmetadataprocessor[98928:53355452] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+ExtractAppIntentsMetadata (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Users/yangzheren/Library/Developer/DVTDownloads/MetalToolchain/mounts/058e1b31129b642e40598a87b55aa54b2a29e538/Metal.xctoolchain --module-name Altiscope --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.2.sdk --xcode-version 17C529 --platform-family iOS --deployment-target 17.6 --bundle-identifier name.zherenyang.Altiscope --output /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app --target-triple arm64-apple-ios17.6-simulator --binary-file /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Altiscope --dependency-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope_dependency_info.dat --stringsdata-file /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList --metadata-file-list /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.DependencyMetadataFileList --static-metadata-file-list /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-09-27 23:12:47.342 appintentsmetadataprocessor[29564:56812360] Starting appintentsmetadataprocessor export
+2026-09-27 23:12:47.343 appintentsmetadataprocessor[29564:56812360] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+AppIntentsSSUTraining (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Info.plist --temp-dir-path /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/ssu --bundle-id name.zherenyang.Altiscope --product-path /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app --extracted-metadata-path /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app/Metadata.appintents --metadata-file-list /tmp/AltiscopeDerivedData/Build/Intermediates.noindex/Altiscope.build/Debug-iphonesimulator/Altiscope.build/Altiscope.DependencyMetadataFileList --archive-ssu-assets
+2026-09-27 23:12:47.359 appintentsnltrainingprocessor[29565:56812362] Parsing options for appintentsnltrainingprocessor
+2026-09-27 23:12:47.359 appintentsnltrainingprocessor[29565:56812362] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-RegisterExecutionPolicyException /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app
+
+Validate /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    builtin-validationUtility /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/XcodeProjects/Altiscope
+    /usr/bin/touch -c /tmp/AltiscopeDerivedData/Build/Products/Debug-iphonesimulator/Altiscope.app
 
 ** BUILD SUCCEEDED **
 

@@ -26,8 +26,6 @@ _A local-first journey recorder built with SwiftUI._
 - No account is required. Your track log stays on the device until you choose to export it.
   - 无需注册账号；除非主动导出，轨迹日志默认只保存在本机。
 
-> **命名说明：** Xcode 工程与 Target 名称为 **Altiscope**；当前应用界面、核心模块和导出文件仍沿用 **Antiscope** 名称。
-
 ## Feature
 
 - **Easy to Use**
@@ -110,7 +108,7 @@ _A local-first journey recorder built with SwiftUI._
 
 ## Recording & Privacy
 
-- **Storage** — 记录保存在 `Application Support/Antiscope/Tracks`；一段旅程对应一个追加式 JSONL 文件。
+- **Storage** — 记录保存在 `Application Support/Altiscope/Tracks`；一段旅程对应一个追加式 JSONL 文件。
 - **Recovery** — 应用重启后，未结束的记录会恢复为暂停状态；若最后一次写入被截断，原文件会先备份再恢复。
 - **Background** — 仅在记录期间启用后台定位。锁屏后可以继续接收系统允许的定位更新，但强制退出、重启设备或划掉应用后不能保证继续采样。
 - **Motion** — 加速度来自 Core Motion 的 `userAcceleration`，目标采样率为 20 Hz，日志最多每秒保存一次；它不会被积分为推测位置。
@@ -124,8 +122,8 @@ App/
   Maps/                         离线、MapKit、高德与 Google 地图适配
   Views/                        轨迹、日志、仪表、设置与统计图表
   Resources/                    权限说明、图标与隐私清单
-Sources/AntiscopeCore/          数据模型、过滤、持久化与导出
-Tests/AntiscopeCoreTests/       独立于 iOS UI 的核心测试
+Sources/AltiscopeCore/          数据模型、过滤、持久化与导出
+Tests/AltiscopeCoreTests/       独立于 iOS UI 的核心测试
 Config/                         构建设置与本地密钥模板
 Documentation/                 设计参考、截图与验证记录
 Scripts/                        SDK 下载与 Xcode 工程生成脚本
@@ -169,6 +167,6 @@ xcodebuild -project Altiscope.xcodeproj -scheme Altiscope \
 
 ## License
 
+Altiscope 的原创代码采用 [MIT License](LICENSE) 发布。
+
 第三方 SDK、地图数据、商标与资源遵循其各自的许可、服务条款和署名要求，`Vendor/` 中的内容不属于 Altiscope 的原创部分。
-
-

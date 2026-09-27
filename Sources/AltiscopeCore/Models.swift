@@ -141,6 +141,6 @@ public enum TrackExport {
                 return "<trkpt lat=\"\(p.coordinate.latitude)\" lon=\"\(p.coordinate.longitude)\">\(elevation)<time>\(formatter.string(from: p.timestamp))</time></trkpt>"
             }.joined(separator: "\n") + "\n</trkseg>"
         }.joined(separator: "\n")
-        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<gpx version=\"1.1\" creator=\"Antiscope\" xmlns=\"http://www.topografix.com/GPX/1/1\"><trk><name>\(xml(session.title))</name><desc>\(xml(session.notes))</desc>\(segments)</trk></gpx>"
+        return "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<gpx version=\"1.1\" creator=\"Altiscope\" xmlns=\"http://www.topografix.com/GPX/1/1\"><trk><name>\(xml(session.title))</name><desc>\(xml(session.notes))</desc>\(segments)</trk></gpx>"
     }
 }

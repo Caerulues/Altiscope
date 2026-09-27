@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Antiscope 使用精确位置记录你的轨迹、速度和海拔，开始记录后会在锁屏期间继续定位。</string>
+	<string>Altiscope 使用精确位置记录你的轨迹、速度和海拔，开始记录后会在锁屏期间继续定位。</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Antiscope 使用运动传感器记录去除重力后的三轴加速度。</string>
+	<string>Altiscope 使用运动传感器记录去除重力后的三轴加速度。</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

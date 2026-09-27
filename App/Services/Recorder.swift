@@ -45,7 +45,7 @@ import Network
         manager.showsBackgroundLocationIndicator = true
         authorization = manager.authorizationStatus
         do {
-            let directory = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("Antiscope/Tracks")
+            let directory = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("Altiscope/Tracks")
             store = try TrackStore(directory: directory)
             let loaded = try store!.load()
             sessions = loaded.sessions
@@ -55,7 +55,7 @@ import Network
         monitor.pathUpdateHandler = { [weak self] path in
             DispatchQueue.main.async { self?.isOnline = path.status == .satisfied }
         }
-        monitor.start(queue: DispatchQueue(label: "app.antiscope.network"))
+        monitor.start(queue: DispatchQueue(label: "app.altiscope.network"))
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             Task { @MainActor in self?.now = Date() }
         }
@@ -70,7 +70,7 @@ import Network
         switch manager.authorizationStatus {
         case .authorizedWhenInUse, .authorizedAlways: beginAuthorized()
         case .notDetermined: manager.requestWhenInUseAuthorization()
-        default: pendingStart = false; message = "定位权限未开启。请在系统设置中允许 Antiscope 使用精确位置。"
+        default: pendingStart = false; message = "定位权限未开启。请在系统设置中允许 Altiscope 使用精确位置。"
         }
     }
 
@@ -146,7 +146,7 @@ import Network
     }
     func export(gpx: Bool) {
         guard let session = displayed else { return }
-        do { shareURL = try store?.writeExport(session, gpx: gpx, to: FileManager.default.temporaryDirectory.appendingPathComponent("AntiscopeExports")) }
+        do { shareURL = try store?.writeExport(session, gpx: gpx, to: FileManager.default.temporaryDirectory.appendingPathComponent("AltiscopeExports")) }
         catch { message = "导出失败：\(error.localizedDescription)" }
     }
     private func stopSensors() {
