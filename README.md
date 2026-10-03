@@ -1,172 +1,50 @@
-<img src="App/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png" width="240" alt="Altiscope app icon" align="right" />
-
-<div align="center">
+<img src="App/Resources/Assets.xcassets/AppIcon.appiconset/AppIcon.png" width="160" alt="Altiscope app icon" align="right" />
 
 # Altiscope
 
-_A local-first journey recorder built with SwiftUI._
+A local-first journey recorder for iPhone and iPad. Your journey, recorded.
 
-> Your journey, recorded.
+## 功能
 
-![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS-111318?style=flat-square)
-![iOS](https://img.shields.io/badge/iOS-17.6%2B-7C5CFC?style=flat-square)
-![Swift](https://img.shields.io/badge/Swift-5-F05138?style=flat-square&logo=swift&logoColor=white)
-![Storage](https://img.shields.io/badge/storage-local--first-63DFC5?style=flat-square)
+- **旅程记录** ：步行、骑行、驾车、飞行；开始、暂停、继续、结束；本地存储，无需账号。
+- **地图** ：Apple MapKit 与离线画布。进入实时页面即可请求当前位置；预览不创建日志。手动浏览退出跟随，定位按钮恢复跟随，保存后显示全览。
+- **界面** ：iPhone 可折叠信息面板；iPad 仅显示图标的窄侧栏、悬停名称提示与可折叠移动浮窗；顶部实际应用图标、当地时间/UTC 切换。
+- **三维轨迹** ：按真实记录高度绘制主线和半透明幕帘，零平面固定为 0 m；支持点选高度、与图表共享单位，未知高度/暂停处断开。相机不能可靠对齐时回退二维；系统全览限制倾角时，进入三维自动查看局部航段。详见[三维实现与验证](Documentation/THREE-D-ROUTE.md)及[真实航线修正记录](Documentation/THREE-D-REAL-FLIGHT-2026-10-03.md)。
+- **回看** ：按海拔着色、海拔与地速共享 UTC 时间轴的双轴图、在设置页切换公制 m / km/h 与航空 ft / kts，选择自动保存。
+- **日志管理** ：名称/笔记搜索、日志内修改名称/类型/笔记、删除确认；GPX / JSON / JSONL 导入预览、重复检测、多个轨迹分别导入。
+- **格式** ：版本化 JSONL 元数据首行和逐时刻采样；JSON 与 GPX 保留惯导、定位观测、原始运动、空值和分段。旧格式兼容读取，迁移前备份。
+- **实验惯导** ：默认关闭，在设置中为下一段旅程启用。20 Hz 运动预测、约 5 秒检查新定位；保留独立来源与误差状态。纯软件回放已经测试，未完成真机标定。
 
-</div>
+## 构建
 
-<br clear="right" />
-
----
-
-## Welcome
-
-- Altiscope is a native journey recorder for iPhone and iPad, powered by GPS, compass and motion sensors.
-  - Altiscope 是一款使用 GPS、指南针与运动传感器记录真实旅程的 SwiftUI 应用。
-- No account is required. Your track log stays on the device until you choose to export it.
-  - 无需注册账号；除非主动导出，轨迹日志默认只保存在本机。
-
-## Feature
-
-- **Easy to Use**
-  - 选择步行、骑行、驾车或飞行，点击一次即可开始记录；支持暂停、继续与结束。
-- **Local First**
-  - 每段旅程以追加式 JSONL 日志保存，并在每次写入后同步落盘；无需账户或自建服务器。
-- **Sensor Aware**
-  - 记录 WGS 84 经纬度、海拔、地速、移动方向、手机朝向、定位精度与去重力三轴加速度。
-- **Multiple Maps**
-  - 支持离线轨迹画布、Apple 地图、高德地图与 Google Maps；切换底图不会改变原始轨迹数据。
-- **Honest Tracking**
-  - 过滤失效、乱序及明显不合理的定位；暂停或信号中断时自动断开轨迹段，不用直线补齐缺口。
-- **Portable Records**
-  - 可导出保留轨迹分段的 GPX 1.1，或包含完整定位与运动采样的 JSON。
-
-## Preview
-
-<p align="center">
-  <img src="Documentation/Previews/iphone-map.png" width="360" alt="Altiscope Apple Maps route preview" />
-  &nbsp;&nbsp;
-  <img src="Documentation/Previews/iphone-offline.png" width="360" alt="Altiscope offline canvas preview" />
-</p>
-
-> 截图中的路线是 **Demo Route**，不是真实行程。
-
-## Quick Start
-
-### Requirements
-
-- macOS 与 Xcode；当前工程已在 **Xcode 26.3** 验证。
-- iPhone 或 iPad，最低系统版本为 **iOS / iPadOS 17.6**。
-- 真机记录需要允许精确定位；加速度功能需要可用的运动传感器。
-
-### Build
-
-1. 准备 Xcode 工程与地图依赖。
-
-   仅使用离线画布与 Apple 地图：
-
-   ```sh
-   python3 Scripts/generate_project.py
-   ```
-
-   同时接入项目锁定版本的 Google Maps 与高德 SDK：
-
-   ```sh
-   python3 Scripts/fetch_sdks.py
-   ```
-
-   下载脚本使用地图提供方的官方分发地址，无需 CocoaPods 或 XcodeGen。
-
-2. 如需第三方地图，创建本地配置文件：
-
-   ```sh
-   cp Config/Secrets.example.xcconfig Config/Secrets.xcconfig
-   ```
-
-   ```xcconfig
-   GOOGLE_MAPS_API_KEY = your_google_ios_key
-   AMAP_API_KEY = your_amap_ios_key
-   DEVELOPMENT_TEAM = your_team_id
-   ```
-
-   API Key 应限制为最终使用的 Bundle Identifier；`Secrets.xcconfig` 已被 Git 忽略。
-
-3. 打开 `Altiscope.xcodeproj`，选择 **Altiscope** Scheme，并在 Signing & Capabilities 中确认自己的开发团队与唯一 Bundle Identifier。
-4. 选择模拟器或已解锁的真机，按 `⌘R` 构建运行。首次开始记录时，按系统提示授予定位与运动访问权限。
-5. 没有真机时，可点击 **“浏览示例轨迹”** 查看地图、统计曲线和导出入口；模拟器不会伪造运动传感器读数。
-
-## Map Providers
-
-| 地图来源 | API Key | 离线能力 | 运行限制 |
-|---|---:|---|---|
-| **离线轨迹画布** | 不需要 | 轨迹、经纬网、缩放、拖动与比例尺 | 不包含街道底图 |
-| **Apple 地图** | 不需要 | 底图不保证离线可用 | 使用系统 MapKit |
-| **高德地图** | 需要 | 支持已获授权并预先下载的离线包 | 当前二进制仅用于真机；SDK 11.0+ 的离线地图需开通高阶服务 |
-| **Google Maps** | 需要 | 本应用不提供离线区域下载 | 需在 Google Cloud 启用 Maps SDK for iOS |
-
-第三方地图只有在用户阅读提示并主动启用后才会初始化。地图 SDK 会连接其提供方以加载当前视口；Altiscope 自身没有账户、服务器或轨迹上传接口。
-
-## Recording & Privacy
-
-- **Storage** — 记录保存在 `Application Support/Altiscope/Tracks`；一段旅程对应一个追加式 JSONL 文件。
-- **Recovery** — 应用重启后，未结束的记录会恢复为暂停状态；若最后一次写入被截断，原文件会先备份再恢复。
-- **Background** — 仅在记录期间启用后台定位。锁屏后可以继续接收系统允许的定位更新，但强制退出、重启设备或划掉应用后不能保证继续采样。
-- **Motion** — 加速度来自 Core Motion 的 `userAcceleration`，目标采样率为 20 Hz，日志最多每秒保存一次；它不会被积分为推测位置。
-- **Export** — GPX 使用 WGS 84 坐标并保留轨迹段；JSON 包含完整记录。卸载应用会删除本地数据，请提前导出需要保留的旅程。
-
-## Project Structure
-
-```text
-App/
-  Services/Recorder.swift       定位、指南针、运动与记录生命周期
-  Maps/                         离线、MapKit、高德与 Google 地图适配
-  Views/                        轨迹、日志、仪表、设置与统计图表
-  Resources/                    权限说明、图标与隐私清单
-Sources/AltiscopeCore/          数据模型、过滤、持久化与导出
-Tests/AltiscopeCoreTests/       独立于 iOS UI 的核心测试
-Config/                         构建设置与本地密钥模板
-Documentation/                 设计参考、截图与验证记录
-Scripts/                        SDK 下载与 Xcode 工程生成脚本
-```
-
-## Validation
+需要 Xcode；应用最低 iOS / iPadOS 17.6，核心包支持 macOS 13 / iOS 17。此次验证使用 Xcode 26.3。
 
 ```sh
+python3 Scripts/generate_project.py
 swift test
-
 xcodebuild -project Altiscope.xcodeproj -scheme Altiscope \
   -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
   CODE_SIGNING_ALLOWED=NO build
-
-xcodebuild -project Altiscope.xcodeproj -scheme Altiscope \
-  -sdk iphoneos -destination 'generic/platform=iOS' \
-  CODE_SIGNING_ALLOWED=NO build
 ```
 
-当前记录的验证结果包括 **8 项 Swift 核心测试全部通过**，以及模拟器和未签名真机目标构建成功。详细范围与尚未完成的真机验收见 [Documentation/VALIDATION.md](Documentation/VALIDATION.md)。
+打开 `Altiscope.xcodeproj` 运行应用；模拟器构建无需个人签名团队。真机安装时，复制 `Config/Secrets.example.xcconfig` 为 `Config/Secrets.xcconfig` 并填写自己的 `DEVELOPMENT_TEAM`；这个本地文件被 Git 忽略，现有签名设置保留在其中。
 
-> 模拟器构建通过不代表室外 GPS、指南针、磁干扰、长时间锁屏记录、耗电或第三方地图 Key 已在真实设备上完成验证。本项目不应作为测绘或航空导航仪表使用。
+## 记录与验证边界
 
-## Link
+**原始数据使用 WGS 84** 。MapKit 使用系统定义的坐标输入，没有未经测量的附加偏移。大陆偏移反馈仍需在实机对比系统位置标记与已知参考点，不能凭底图提供方推断转换需求。（[Apple CLLocationCoordinate2D](https://developer.apple.com/documentation/corelocation/cllocationcoordinate2d)。）
 
-| 内容 | 链接 |
-|---|---|
-| 验证范围 | [Documentation/VALIDATION.md](Documentation/VALIDATION.md) |
-| 设计参考说明 | [Documentation/volanta-reference.md](Documentation/volanta-reference.md) |
-| Apple 后台轨迹示例 | [Displaying an updating path of a user's location history](https://developer.apple.com/documentation/mapkit/displaying-an-updating-path-of-a-user-s-location-history) |
-| Google Maps iOS SDK | [Overview](https://developers.google.com/maps/documentation/ios-sdk/overview) |
-| 高德 iOS SDK | [离线地图说明](https://lbs.amap.com/api/ios-sdk/guide/create-map/use-offlinemap) |
+显示转换组件等价移植 **wandergis/coordtransform 2.1.2** 的 WGS84 / GCJ02 函数，固定 commit `606c6f3b57b6f1d60458793fea39928d2b11b637`。参考系标签防止二次转换；适用区域必须由已核实的区域信息明确指定，港澳台、境外及边界不明时不转换。当前 MapKit 路径要求 WGS84，因此没有启用 GCJ02 转换；矩形判断不充当大陆地理边界。详见实施记录。
 
-## Thanks
+**惯导仍为实验功能** 。当前预测时长、误差阈值和偏置约束是原型设计值，不能视为设备校准结果；运动中断或状态失效保留缺口。没有完成真实携带姿态、城市/隧道、飞行、长时间后台和能耗验收。应用不能用作航空导航或测绘仪器。
 
-- [Volanta](https://volanta.app/features/) 为地图中心布局、轨迹视觉与日志信息层级提供了产品设计参考；Altiscope 是独立作品，与 Orbx / Volanta 无隶属关系。
-- Apple 的 Core Location、Core Motion、MapKit 与 Swift Charts 提供了系统级能力。
-- Google Maps SDK for iOS 与高德地图 iOS SDK 提供可选的第三方底图。
+- [2026-10-02 实施与验证记录](Documentation/IMPLEMENTATION-2026-10-02.md)
+- [文件格式、迁移及 GPX 扩展规范](Documentation/TRACK-FORMAT.md)
+- [此前的历史验收记录](Documentation/VALIDATION.md)（旧版功能和结果，不代表当前版本）
 
----
+## LICENSE
 
-## License
+[MIT License](LICENSE) © 2026 Caeruvis
 
-Altiscope 的原创代码采用 [MIT License](LICENSE) 发布。
+设计参考 Volanta 的地图、日志和统计布局。
 
-第三方 SDK、地图数据、商标与资源遵循其各自的许可、服务条款和署名要求，`Vendor/` 中的内容不属于 Altiscope 的原创部分。
+坐标转换部分源自 [wandergis/coordtransform](https://github.com/wandergis/coordtransform/tree/606c6f3b57b6f1d60458793fea39928d2b11b637)，© 2015 记忆的残骸，遵循 [MIT 许可](App/Resources/CoordTransform-LICENSE.txt)。版权与授权文本随应用资源打包。

@@ -1,4 +1,5 @@
-DEVELOPMENT_TEAM = RQYLJWZ838
+// Set your signing team in the ignored Config/Secrets.xcconfig.
+DEVELOPMENT_TEAM =
 PRODUCT_BUNDLE_IDENTIFIER = name.zherenyang.Altiscope
 IPHONEOS_DEPLOYMENT_TARGET = 17.6
 SWIFT_VERSION = 5.0

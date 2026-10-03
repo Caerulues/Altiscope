@@ -22,3 +22,25 @@ public enum DemoRoute {
         return route
     }
 }
+
+#if DEBUG
+extension DemoRoute {
+    /// Reproducible render fixture. Never placed in the journal or enabled in Release builds.
+    public static func altitudePreview() -> TrackSession {
+        let start = Date(timeIntervalSince1970: 1_790_417_400)
+        var route = TrackSession(title: "三维验收 · 虚构轨迹", mode: .flight, startedAt: start)
+        route.isDemo = true; route.altitudeReference = "MSL"
+        for index in 0...240 {
+            let t = Double(index)/240, angle = t * .pi * 4
+            let coordinate = Coordinate(32.076 + 0.10*sin(angle),118.792 + 0.12*cos(angle))
+            let altitude: Double? = (110...114).contains(index) ? nil : index < 20 ? 0 : index > 230 ? -120 : min(12000,max(0,sin(t * .pi)*15000-1500))
+            var point = TrackPoint(timestamp:start.addingTimeInterval(Double(index)*10),coordinate:coordinate,
+                altitude:altitude,speed:80,segment:index<170 ? 0:1)
+            point.estimated = (140...160).contains(index)
+            route.points.append(point)
+        }
+        route.finish(at:start.addingTimeInterval(2400)); route.notes = "纯合成测试：零高度、爬升、平飞、下降、盘旋、负高度、未知高度、估计段与暂停。"
+        return route
+    }
+}
+#endif

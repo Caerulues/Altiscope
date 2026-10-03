@@ -1,0 +1,11 @@
+{
+  "averageCPUFrameMs" : 1.0473428239897151,
+  "curtainTriangles" : 468,
+  "drawCallbacksPerSecond" : 29.450730104238225,
+  "frames" : 180,
+  "maximumCPUFrameMs" : 5.0857083406299353,
+  "note" : "Simulator draw callbacks and CPU submission only; not device GPU FPS or energy.",
+  "routeVertices" : 236,
+  "synthetic" : true,
+  "targetFPS" : 30
+}

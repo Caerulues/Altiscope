@@ -1,0 +1,507 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Altiscope.xcodeproj -scheme Altiscope -configuration Release -sdk iphoneos -destination generic/platform=iOS -derivedDataPath /private/tmp/altiscope-real-route-device CODE_SIGNING_ALLOWED=NO build
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+    SDKROOT = iphoneos26.2
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'Altiscope' in project 'Altiscope' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: c83fd52d8d74bff7e4a1341cadb55bf2
+Build description path: /tmp/altiscope-real-route-device/Build/Intermediates.noindex/XCBuildData/c83fd52d8d74bff7e4a1341cadb55bf2.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk /tmp/altiscope-real-route-device/SDKStatCaches.noindex/iphoneos26.2-23C57-dc75598d0054f22ec865fa860f139d723794476bd08197c3e2abd9bb477ef7f7.sdkstatcache
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Altiscope.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -o /tmp/altiscope-real-route-device/SDKStatCaches.noindex/iphoneos26.2-23C57-dc75598d0054f22ec865fa860f139d723794476bd08197c3e2abd9bb477ef7f7.sdkstatcache
+
+CreateBuildDirectory /tmp/altiscope-real-route-device/Build/Intermediates.noindex
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/altiscope-real-route-device/Build/Intermediates.noindex
+
+CreateBuildDirectory /tmp/altiscope-real-route-device/Build/Products
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/altiscope-real-route-device/Build/Products
+
+CreateBuildDirectory /tmp/altiscope-real-route-device/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/altiscope-real-route-device/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /tmp/altiscope-real-route-device/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/altiscope-real-route-device/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope-d98a0acb52c70d6f0eddc06e25ba65d9-VFS-iphoneos/all-product-headers.yaml
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Altiscope.xcodeproj
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope-d98a0acb52c70d6f0eddc06e25ba65d9-VFS-iphoneos/all-product-headers.yaml
+
+CreateBuildDirectory /tmp/altiscope-real-route-device/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/altiscope-real-route-device/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos
+
+CreateBuildDirectory /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Altiscope.xcodeproj
+    builtin-create-build-directory /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-project-headers.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-project-headers.hmap
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.DependencyStaticMetadataFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.hmap
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.DependencyMetadataFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.DependencyMetadataFileList
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.LinkFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.LinkFileList
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftConstValuesFileList (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-own-target-headers.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-own-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-generated-files.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-generated-files.hmap
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-all-target-headers.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-all-target-headers.hmap
+
+WriteAuxiliaryFile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-all-non-framework-target-headers.hmap (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    write-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-all-non-framework-target-headers.hmap
+
+MkDir /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /bin/mkdir -p /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app
+
+MkDir /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/thinned (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /bin/mkdir -p /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/thinned
+
+CpResource /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/PrivacyInfo.xcprivacy /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/PrivacyInfo.xcprivacy (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/PrivacyInfo.xcprivacy /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app
+
+MkDir /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/unthinned (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /bin/mkdir -p /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/unthinned
+
+CpResource /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/CoordTransform-LICENSE.txt /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/CoordTransform-LICENSE.txt (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/CoordTransform-LICENSE.txt /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app
+
+GenerateAssetSymbols /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/Assets.xcassets (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/Assets.xcassets --compile /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_dependencies --output-partial-info-plist /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_generated_info.plist --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region zh-Hans --target-device iphone --target-device ipad --minimum-deployment-target 17.6 --platform iphoneos --bundle-identifier name.zherenyang.Altiscope --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/GeneratedAssetSymbols.h
+/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/Assets.xcassets (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/Assets.xcassets --compile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_dependencies_thinned --output-partial-info-plist /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --compress-pngs --enable-on-demand-resources YES --development-region zh-Hans --target-device iphone --target-device ipad --minimum-deployment-target 17.6 --platform iphoneos
+/* com.apple.actool.compilation-results */
+/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_generated_info.plist_thinned
+/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver Altiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Altiscope -O -enforce-exclusivity\=checked @/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -target arm64-apple-ios17.6 -g -module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos -F /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos -emit-localized-strings -emit-localized-strings-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/altiscope-real-route-device/SDKStatCaches.noindex/iphoneos26.2-23C57-dc75598d0054f22ec865fa860f139d723794476bd08197c3e2abd9bb477ef7f7.sdkstatcache -output-file-map /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -sdk-module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/altiscope-real-route-device/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-generated-files.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-own-target-headers.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-project-headers.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/include -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/arm64 -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h -working-directory /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/ptrcheck-61IAGEWFCGNW5ZQ5KXXVG449X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_SwiftConcurrencyShims-DL86701OP23G64DHB9CZYJO9Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_stddef-53JDFETIPIJSEQLUY6MDVWHOA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/DeveloperToolsSupport-6Q7LUA59ER8C290KAX9SVD30U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/SwiftShims-9ZCNY1YTESIXZR1KIGGZTZR3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_AvailabilityInternal-48747KWI2I6XAVUJ3LWXEX663.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_stdbool-BSEE54M1UV2WOKVH0T3DEIZZZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_float-MCKPIAHO5MZEDEGBVPE0E2RX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/ptrauth-EBAR59ZN0ZWWLPRVP5F55GHLC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_stdarg-5DSV654C1ZP2ROD7FGVNNC9KC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_DarwinFoundation1-4MBKM4GV03L59U2Y4TG2PD5ET.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_DarwinFoundation2-CI615PHOGWVBH3M4XQJN1C96G.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_limits-2TBPEX9C0XKR8MUW054DYKOM2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_tgmath-8IV6OBUDJGE88WVNCLJCN7NJ5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_stdint-EYV5K9TYSC296IPGN4DCYCLRZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/sys_types-74APLC9DYTV7HM8IERA43LLFW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_stdatomic-4T9N8GZZ5BA72YLPWEF5U8A5C.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_DarwinFoundation3-8XOG3MA2OC5S8Y5E37ROYUSMJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_intrinsics-42C0N8SS44MJN4E3OUWYB6SDB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_Builtin_inttypes-TQPMA4ZZ4TRB0HTRY1B1RAX2.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Darwin-CPDGH02YQ76BBCOUNF61YTUEX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/simd-7CE1N3P630O27BP8AUEPMPS0B.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/ObjectiveC-PPPXXXGVZBIYFD4R16GHDKLC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/MachO-595EOZPVZ2CUWSZJ5SFQ30IYR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/os_object-8JP9BNSEZYUERQY76P10AMSH4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/os_workgroup-ARA4SUH479XDDFGE45L02M6Q4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Spatial-DIPGZ5TAQWZWNXNKABI4E8FZT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Dispatch-8LLCOOTFHJ1XVCO6PWXKX30VG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/XPC-AJ9I2KZUZ8GDD1HM6U0R7VT2U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/dnssd-37QY3B9PD3G8VR4JW6E9FCQ9Z.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreFoundation-ZKLK2GOP05SCJ3IYGAQI9I4P.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/os-7Z4JTXP7B5CW0JF73UUUYNO0M.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreGraphics-9YSNSGSTEK9TW1R2BFF4P34AC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CFNetwork-82HIBWJSRN20SVFXAB8EWURJ4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Security-BO2XDZOP0P6GR470DZAQGAO07.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Foundation-E5M32V0407TVHYSR124QIKNS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/ImageIO-10HMJXDAF684BP72ZTCZFB2WJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreText-1RE0QVQU8BWKP65C056U7ACRJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/LocalAuthentication-5YDPSN4RUXYHYGH1KEGTJQ66I.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreData-D0T3SMPLYJLC71TVA6MYXVYYZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Network-BJC7ANE1NA6SNRP9JC398SGDU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/UserNotifications-91N9X18YBJG4JH6GHP9XGP21U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/ModelIO-64LG1SBTRRPO8RC2IGJ9FRAOG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/_LocationEssentials-67PEAYC8H88EHSWM2L9DX3SIN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/FileProvider-2MDC3OM551AB4L43J1YCGJ252.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/IOSurface-7B5N1W8KAUXGXKBO4ZEGSF8ZO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/UniformTypeIdentifiers-9A3SRCN70OF1KWA2ZVI4B0A42.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreTransferable-AA10LLHWOZX7Q6INVJJ8EMGCE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Accessibility-2BPDI3UJDPJVTY9VUBCO0UVM0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreLocation-BCK8OGZ9KPI59ZB3F0V69ZF2B.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Symbols-57QS1PZUA8KYOCPYPC90LQIZI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/OpenGLES-B7SG4UVHLNA1QH4JWKIV7IS2X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/Metal-A4HKSCPKORO0ID0BMP8QXB06G.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/OSLog-3GWM2M27D1R9OX7HR970C9X43.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/DataDetection-32YYXDVJ5KUUKHJI7RQ048R12.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/UIUtilities-BF8S7A7C0GPGIJNCC4GGW5D1J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreMotion-9LX1C2BOWVB1NLQFA7GV30913.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreVideo-ANU4QTJ1KWYKOMT9OS392ZXEY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/QuartzCore-LNF0IE8MV3TSGR0N96LORXCN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/CoreImage-37FM28WT7GIP93T1OL5OUB6AQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/SwiftUICore-BYQFVBCIHTF6D4TM38XS2ANL9.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/UIKit-78JPIVLE45LW9KJIOW3NJHGIC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/MapKit-7W196SGWGWFPMLVTS3QFDHW7X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/MetalKit-2O0GZ9LR137LFPT2KMU0HZTKW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /tmp/altiscope-real-route-device/ModuleCache.noindex/SwiftUI-6VOE5LE0ARWVAO9UJYFEYFFM9.pcm
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ Altiscope (in target 'Altiscope' from project 'Altiscope')
+EmitSwiftModule normal arm64 (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ TrackStore.swift,\ GeneratedAssetSymbols.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/TrackStore.swift /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'Altiscope' from project 'Altiscope')
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/TrackStore.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ Models.swift,\ RouteDisplay.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/Models.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/RouteDisplay.swift (in target 'Altiscope' from project 'Altiscope')
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/Models.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/RouteDisplay.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ TrackerView.swift,\ CoordinateTransform.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/TrackerView.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/CoordinateTransform.swift (in target 'Altiscope' from project 'Altiscope')
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/TrackerView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/CoordinateTransform.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ TrackDocument.swift,\ TrackImport.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/TrackDocument.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/TrackImport.swift (in target 'Altiscope' from project 'Altiscope')
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/TrackDocument.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/TrackImport.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ RouteChart.swift,\ SettingsView.swift,\ Theme.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/RouteChart.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/SettingsView.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/Theme.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/RouteChart.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/SettingsView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/Theme.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ RouteScene.swift,\ RouteStyle.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/RouteScene.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/RouteStyle.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/RouteScene.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/RouteStyle.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ DemoRoute.swift,\ InertialNavigator.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/DemoRoute.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/InertialNavigator.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/DemoRoute.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/Sources/AltiscopeCore/InertialNavigator.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ RouteAltitudeRenderer.swift,\ RouteMapView.swift,\ Recorder.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Maps/RouteAltitudeRenderer.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Maps/RouteMapView.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Services/Recorder.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Maps/RouteAltitudeRenderer.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Maps/RouteMapView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Services/Recorder.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 Compiling\ InstrumentsView.swift,\ JournalView.swift,\ RootView.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/InstrumentsView.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/JournalView.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/RootView.swift (in target 'Altiscope' from project 'Altiscope')
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/InstrumentsView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/JournalView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Views/RootView.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+LinkAssetCatalog /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/Assets.xcassets (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-linkAssetCatalog --thinned /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/thinned --thinned-dependencies /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_generated_info.plist_thinned --unthinned /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_output/unthinned --unthinned-dependencies /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_generated_info.plist_unthinned --output /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app --plist-output /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_generated_info.plist
+note: Emplaced /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/AppIcon60x60@2x.png (in target 'Altiscope' from project 'Altiscope')
+note: Emplaced /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Assets.car (in target 'Altiscope' from project 'Altiscope')
+note: Emplaced /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/AppIcon76x76@2x~ipad.png (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for Altiscope (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriver\ Compilation\ Requirements Altiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Altiscope -O -enforce-exclusivity\=checked @/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -target arm64-apple-ios17.6 -g -module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos -F /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos -emit-localized-strings -emit-localized-strings-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/altiscope-real-route-device/SDKStatCaches.noindex/iphoneos26.2-23C57-dc75598d0054f22ec865fa860f139d723794476bd08197c3e2abd9bb477ef7f7.sdkstatcache -output-file-map /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -sdk-module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/altiscope-real-route-device/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-generated-files.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-own-target-headers.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-project-headers.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/include -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/arm64 -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h -working-directory /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa -experimental-emit-module-separately -disable-cmo
+
+ProcessInfoPlistFile /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Info.plist /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/Info.plist (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-infoPlistUtility /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Resources/Info.plist -producttype com.apple.product-type.application -genpkginfo /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -additionalcontentfile /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/assetcatalog_generated_info.plist -requiredArchitecture arm64 -o /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Info.plist
+
+SwiftMergeGeneratedHeaders /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/Altiscope-Swift.h /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-swiftHeaderTool -arch arm64 /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h -o /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/Altiscope-Swift.h
+
+Copy /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.swiftmodule/arm64-apple-ios.swiftmodule /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.swiftmodule/arm64-apple-ios.swiftmodule
+
+Copy /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.swiftmodule/arm64-apple-ios.swiftdoc /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftdoc (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftdoc /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.swiftmodule/arm64-apple-ios.swiftdoc
+
+Copy /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.swiftmodule/arm64-apple-ios.abi.json /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.abi.json (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.abi.json /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.swiftmodule/arm64-apple-ios.abi.json
+
+Copy /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftsourceinfo (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-unsigned-binaries -strip-deterministic -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks -rename /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftsourceinfo /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo
+
+SwiftCompile normal arm64 Compiling\ AltiscopeApp.swift,\ MapPreferences.swift,\ OfflineCanvas.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/AltiscopeApp.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Maps/MapPreferences.swift /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Maps/OfflineCanvas.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/AltiscopeApp.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Maps/MapPreferences.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftCompile normal arm64 /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa/App/Maps/OfflineCanvas.swift (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling DemoRoute.swift, InertialNavigator.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RouteScene.swift, RouteStyle.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling AltiscopeApp.swift, MapPreferences.swift, OfflineCanvas.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling TrackStore.swift, GeneratedAssetSymbols.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RouteChart.swift, SettingsView.swift, Theme.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling Models.swift, RouteDisplay.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling TrackerView.swift, CoordinateTransform.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling RouteAltitudeRenderer.swift, RouteMapView.swift, Recorder.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling TrackDocument.swift, TrackImport.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriverJobDiscovery normal arm64 Compiling InstrumentsView.swift, JournalView.swift, RootView.swift (in target 'Altiscope' from project 'Altiscope')
+
+SwiftDriver\ Compilation Altiscope normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Altiscope -O -enforce-exclusivity\=checked @/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -target arm64-apple-ios17.6 -g -module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -Xfrontend -serialize-debugging-options -swift-version 5 -I /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos -F /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos -emit-localized-strings -emit-localized-strings-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64 -c -j10 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /tmp/altiscope-real-route-device/SDKStatCaches.noindex/iphoneos26.2-23C57-dc75598d0054f22ec865fa860f139d723794476bd08197c3e2abd9bb477ef7f7.sdkstatcache -output-file-map /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -sdk-module-cache-path /tmp/altiscope-real-route-device/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule -validate-clang-modules-once -clang-build-session-file /tmp/altiscope-real-route-device/ModuleCache.noindex/Session.modulevalidation -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope_const_extract_protocols.json -Xcc -iquote -Xcc /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-generated-files.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-own-target-headers.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-all-target-headers.hmap -Xcc -iquote -Xcc /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope-project-headers.hmap -Xcc -I/tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/include -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources-normal/arm64 -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources/arm64 -Xcc -I/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/DerivedSources -emit-objc-header -emit-objc-header-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-Swift.h -working-directory /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa -experimental-emit-module-separately -disable-cmo
+
+Ld /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Altiscope normal (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios17.6 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -Os -L/tmp/altiscope-real-route-device/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -L/tmp/altiscope-real-route-device/Build/Products/Release-iphoneos -F/tmp/altiscope-real-route-device/Build/Intermediates.noindex/EagerLinkingTBDs/Release-iphoneos -F/tmp/altiscope-real-route-device/Build/Products/Release-iphoneos -filelist /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -dead_strip -Xlinker -object_path_lto -Xlinker /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope_lto.o -Xlinker -dependency_info -Xlinker /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.swiftmodule @/tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope-linker-args.resp -framework CoreGraphics -framework CoreLocation -framework CoreMotion -framework UIKit -framework MapKit -framework Metal -framework MetalKit -framework Network -o /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Altiscope
+
+CopySwiftLibs /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Altiscope --scan-folder /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Frameworks --scan-folder /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/PlugIns --scan-folder /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/SystemExtensions --scan-folder /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Extensions --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/CoreGraphics.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/CoreLocation.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/CoreMotion.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/UIKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/MapKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/Metal.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/MetalKit.framework --scan-folder /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk/System/Library/Frameworks/Network.framework --platform iphoneos --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.3.7003.10.PCE2EM/Metal.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ExtractAppIntentsMetadata (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.3.7003.10.PCE2EM/Metal.xctoolchain --module-name Altiscope --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk --xcode-version 17C529 --platform-family iOS --deployment-target 17.6 --bundle-identifier name.zherenyang.Altiscope --output /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app --target-triple arm64-apple-ios17.6 --binary-file /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Altiscope --dependency-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope_dependency_info.dat --stringsdata-file /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftFileList --metadata-file-list /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.DependencyMetadataFileList --static-metadata-file-list /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.DependencyStaticMetadataFileList --swift-const-vals-list /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Objects-normal/arm64/Altiscope.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-10-03 16:02:46.570 appintentsmetadataprocessor[53559:10230886] Starting appintentsmetadataprocessor export
+2026-10-03 16:02:46.571 appintentsmetadataprocessor[53559:10230886] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+AppIntentsSSUTraining (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Info.plist --temp-dir-path /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/ssu --bundle-id name.zherenyang.Altiscope --product-path /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app --extracted-metadata-path /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app/Metadata.appintents --metadata-file-list /tmp/altiscope-real-route-device/Build/Intermediates.noindex/Altiscope.build/Release-iphoneos/Altiscope.build/Altiscope.DependencyMetadataFileList --archive-ssu-assets
+2026-10-03 16:02:46.588 appintentsnltrainingprocessor[53560:10230888] Parsing options for appintentsnltrainingprocessor
+2026-10-03 16:02:46.589 appintentsnltrainingprocessor[53560:10230888] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-RegisterExecutionPolicyException /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app
+
+Validate /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    builtin-validationUtility /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app (in target 'Altiscope' from project 'Altiscope')
+    cd /Users/yangzheren/.codex/.chatgpt-projects/g-p-6ab7d577eba481919a5d6f7db8283b1d/.work/altiscope-route-qa
+    /usr/bin/touch -c /tmp/altiscope-real-route-device/Build/Products/Release-iphoneos/Altiscope.app
+
+** BUILD SUCCEEDED **
+

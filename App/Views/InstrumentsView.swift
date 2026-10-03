@@ -26,7 +26,7 @@ struct InstrumentsView: View {
                         Chart(Array(samples.enumerated()),id:\.offset) { item in LineMark(x:.value("时间",item.element.timestamp),y:.value("加速度",item.element.magnitude)).foregroundStyle(Theme.mint) }.chartXAxis(.hidden).chartYAxis(.hidden).frame(height:70)
                     }
                     Text(recorder.sensorMessage).font(.system(size:11)).foregroundStyle(Theme.mint)
-                    Text("已移除重力，坐标轴随手机旋转。加速度不会被积分成假定位置；GPS 中断时，轨迹保留缺口。").font(.system(size:11)).foregroundStyle(Theme.secondary).fixedSize(horizontal:false,vertical:true)
+                    Text("这里显示设备轴去重力加速度。实验惯导另用姿态转换为东、北、天坐标；估计轨迹以虚线表示，失效后保留缺口。").font(.system(size:11)).foregroundStyle(Theme.secondary).fixedSize(horizontal:false,vertical:true)
                 }.panel()
                 VStack(alignment:.leading,spacing:12) {
                     Text("定位质量").font(.system(size:15,weight:.medium))

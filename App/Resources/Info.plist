@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AMapAPIKey</key>
-	<string>$(AMAP_API_KEY)</string>
 	<key>CFBundleDisplayName</key>
 	<string>Altiscope</string>
 	<key>CFBundleExecutable</key>
@@ -18,14 +16,12 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
-	<key>GoogleMapsAPIKey</key>
-	<string>$(GOOGLE_MAPS_API_KEY)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Altiscope 使用精确位置记录你的轨迹、速度和海拔，开始记录后会在锁屏期间继续定位。</string>
 	<key>NSMotionUsageDescription</key>
-	<string>Altiscope 使用运动传感器记录去除重力后的三轴加速度。</string>
+	<string>Altiscope 保存加速度与姿态，供轨迹回看和可选实验惯导使用。</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

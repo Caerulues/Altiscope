@@ -15,23 +15,12 @@ sources=[]; resources=[]; links=[]; children=[]
 for path in sorted([*root.glob('App/**/*.swift'),*root.glob('Sources/**/*.swift')]):
     p=str(path.relative_to(root)); f=ref(p); children.append(f)
     sources.append(add('build:'+p,'PBXBuildFile',fileRef=f))
-for p,kind in [('App/Resources/Assets.xcassets','folder.assetcatalog'),('App/Resources/PrivacyInfo.xcprivacy','text.xml')]:
+for p,kind in [('App/Resources/Assets.xcassets','folder.assetcatalog'),('App/Resources/PrivacyInfo.xcprivacy','text.xml'),('App/Resources/CoordTransform-LICENSE.txt','text')]:
     f=ref(p,kind); children.append(f); resources.append(add('build:'+p,'PBXBuildFile',fileRef=f))
-frameworks=['Accelerate','Contacts','CoreData','CoreGraphics','CoreImage','CoreLocation','CoreMotion','CoreTelephony','CoreText','GLKit','ImageIO','Metal','OpenGLES','QuartzCore','Security','SystemConfiguration','UIKit','MetricKit','MapKit','Network']
+frameworks=['CoreGraphics','CoreLocation','CoreMotion','UIKit','MapKit','Metal','MetalKit','Network']
 for name in frameworks:
     f=ref(f'System/Library/Frameworks/{name}.framework','wrapper.framework','SDKROOT')
     children.append(f); links.append(add('link:'+name,'PBXBuildFile',fileRef=f))
-google=root/'Vendor/Google/GoogleMaps.xcframework'
-if google.exists():
-    f=ref(str(google.relative_to(root)),'wrapper.xcframework'); children.append(f); links.append(add('link:google','PBXBuildFile',fileRef=f))
-    p='Vendor/Google/Distribution/Maps/Resources/GoogleMapsResources/GoogleMaps.bundle'
-    f=ref(p,'wrapper.plug-in'); children.append(f); resources.append(add('build:'+p,'PBXBuildFile',fileRef=f))
-amap_exists=(root/'Vendor/AMap/MAMapKit.framework').exists() and (root/'Vendor/AMap/AMapFoundationKit.framework').exists()
-if amap_exists:
-    # AMap's arm64 slice is an iPhone binary, not an Apple Silicon simulator binary.
-    for name in ['MAMapKit','AMapFoundationKit']:
-        f=ref('Vendor/AMap/'+name+'.framework','wrapper.framework'); children.append(f)
-    f=ref('Vendor/AMap/MAMapKit.framework/AMap.bundle','wrapper.plug-in'); children.append(f); resources.append(add('build:amap-resources','PBXBuildFile',fileRef=f))
 config=ref('Config/App.xcconfig','text.xcconfig'); children.append(config)
 product=add('product','PBXFileReference',explicitFileType='wrapper.application',path=APP_NAME+'.app',sourceTree='BUILT_PRODUCTS_DIR')
 products=add('products','PBXGroup',children=[product],name='Products',sourceTree='<group>')
@@ -42,10 +31,7 @@ fw=add('frameworks','PBXFrameworksBuildPhase',buildActionMask=2147483647,files=l
 project_configs=[]; target_configs=[]
 for name in ['Debug','Release']:
     project_configs.append(add('project:'+name,'XCBuildConfiguration',name=name,buildSettings=dict(CLANG_ENABLE_MODULES='YES',SDKROOT='iphoneos',SWIFT_OPTIMIZATION_LEVEL='-Onone' if name=='Debug' else '-O',DEBUG_INFORMATION_FORMAT='dwarf',ENABLE_USER_SCRIPT_SANDBOXING='YES')))
-    settings=dict(PRODUCT_NAME='$(TARGET_NAME)',SWIFT_EMIT_LOC_STRINGS='YES',SUPPORTED_PLATFORMS='iphoneos iphonesimulator',SUPPORTS_MACCATALYST='NO',OTHER_LDFLAGS=['$(inherited)','-ObjC','-lc++','-lz','-lsqlite3'],SWIFT_ACTIVE_COMPILATION_CONDITIONS='DEBUG' if name=='Debug' else '')
-    if amap_exists:
-        settings['FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]']=['$(inherited)','$(PROJECT_DIR)/Vendor/AMap']
-        settings['OTHER_LDFLAGS[sdk=iphoneos*]']=['$(inherited)','-framework','MAMapKit','-framework','AMapFoundationKit']
+    settings=dict(PRODUCT_NAME='$(TARGET_NAME)',SWIFT_EMIT_LOC_STRINGS='YES',SUPPORTED_PLATFORMS='iphoneos iphonesimulator',SUPPORTS_MACCATALYST='NO',OTHER_LDFLAGS=['$(inherited)'],SWIFT_ACTIVE_COMPILATION_CONDITIONS='DEBUG' if name=='Debug' else '')
     target_configs.append(add('target:'+name,'XCBuildConfiguration',name=name,baseConfigurationReference=config,buildSettings=settings))
 pcl=add('project-configs','XCConfigurationList',buildConfigurations=project_configs,defaultConfigurationIsVisible=0,defaultConfigurationName='Release')
 tcl=add('target-configs','XCConfigurationList',buildConfigurations=target_configs,defaultConfigurationIsVisible=0,defaultConfigurationName='Release')
@@ -89,13 +75,25 @@ def organize_navigator(objects, main_group, root):
              '.xcconfig': 'text.xcconfig', '.md': 'net.daringfireball.markdown',
              '.py': 'text.script.python', '.json': 'text.json',
              '.png': 'image.png', '.gpx': 'text.xml'}
-    support = [root/'README.md', root/'Package.swift', root/'App/Resources/Info.plist']
+    support = [root/'README.md', root/'LICENSE', root/'Package.swift', root/'App/Resources/Info.plist']
     for folder in ['Config', 'Tests', 'Scripts', 'Documentation']:
         support.extend(sorted((root/folder).rglob('*')))
     for file in support:
         if not file.is_file() or any(part.startswith('.') for part in file.relative_to(root).parts):
             continue
-        path = file.relative_to(root).as_posix()
+        relative = file.relative_to(root)
+        # Private signing overrides are optional build inputs, never shared navigator entries.
+        if relative.parts[0] == 'Config' and relative.as_posix() not in {
+            'Config/App.xcconfig', 'Config/Secrets.example.xcconfig'
+        }:
+            continue
+        # Do not absorb certificates, caches or local backups into the shared project.
+        if file.name != 'LICENSE' and file.suffix not in {
+            '.swift', '.plist', '.xcconfig', '.md', '.py', '.json', '.jsonl',
+            '.png', '.gpx', '.xsd', '.txt', '.log'
+        }:
+            continue
+        path = relative.as_posix()
         key = identifier('file:' + path)
         objects.setdefault(key, dict(isa='PBXFileReference', path=path,
             sourceTree='<group>', lastKnownFileType=kinds.get(file.suffix, 'text')))
@@ -139,10 +137,12 @@ directory=root/(APP_NAME+'.xcodeproj'); directory.mkdir(exist_ok=True)
 data=dict(archiveVersion=1,classes={},objectVersion=56,objects=objects,rootObject=project)
 (directory/'project.pbxproj').write_text('// !$*UTF8*$!\n'+serialize(data)+'\n')
 scheme=directory/'xcshareddata/xcschemes'; scheme.mkdir(parents=True,exist_ok=True)
-(scheme/(APP_NAME+'.xcscheme')).write_text(f'''<?xml version="1.0" encoding="UTF-8"?>
-<Scheme LastUpgradeVersion="2630" version="1.3"><BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES"><BuildActionEntries><BuildActionEntry buildForTesting="YES" buildForRunning="YES" buildForProfiling="YES" buildForArchiving="YES" buildForAnalyzing="YES"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="{target}" BuildableName="{APP_NAME}.app" BlueprintName="{APP_NAME}" ReferencedContainer="container:{APP_NAME}.xcodeproj"/></BuildActionEntry></BuildActionEntries></BuildAction><LaunchAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.IDEFoundation.Launcher.LLDB" launchStyle="0" useCustomWorkingDirectory="NO" ignoresPersistentStateOnLaunch="NO" debugDocumentVersioning="YES" debugServiceExtension="internal" allowLocationSimulation="YES"><BuildableProductRunnable runnableDebuggingMode="0"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="{target}" BuildableName="{APP_NAME}.app" BlueprintName="{APP_NAME}" ReferencedContainer="container:{APP_NAME}.xcodeproj"/></BuildableProductRunnable></LaunchAction><ProfileAction buildConfiguration="Release" shouldUseLaunchSchemeArgsEnv="YES" savedToolIdentifier="" useCustomWorkingDirectory="NO" debugDocumentVersioning="YES"><BuildableProductRunnable runnableDebuggingMode="0"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="{target}" BuildableName="{APP_NAME}.app" BlueprintName="{APP_NAME}" ReferencedContainer="container:{APP_NAME}.xcodeproj"/></BuildableProductRunnable></ProfileAction><AnalyzeAction buildConfiguration="Debug"/><ArchiveAction buildConfiguration="Release" revealArchiveInOrganizer="YES"/></Scheme>''')
-info=dict(CFBundleDisplayName=APP_NAME,CFBundleName='$(PRODUCT_NAME)',CFBundleIdentifier='$(PRODUCT_BUNDLE_IDENTIFIER)',CFBundleExecutable='$(EXECUTABLE_NAME)',CFBundlePackageType='APPL',CFBundleShortVersionString='$(MARKETING_VERSION)',CFBundleVersion='$(CURRENT_PROJECT_VERSION)',LSRequiresIPhoneOS=True,UILaunchScreen={},UIRequiredDeviceCapabilities=['arm64'],UIBackgroundModes=['location'],UISupportedInterfaceOrientations=['UIInterfaceOrientationPortrait'],**{'UISupportedInterfaceOrientations~ipad':['UIInterfaceOrientationPortrait','UIInterfaceOrientationPortraitUpsideDown','UIInterfaceOrientationLandscapeLeft','UIInterfaceOrientationLandscapeRight']},NSLocationWhenInUseUsageDescription='Altiscope 使用精确位置记录你的轨迹、速度和海拔，开始记录后会在锁屏期间继续定位。',NSMotionUsageDescription='Altiscope 使用运动传感器记录去除重力后的三轴加速度。',GoogleMapsAPIKey='$(GOOGLE_MAPS_API_KEY)',AMapAPIKey='$(AMAP_API_KEY)')
+# Preserve existing Xcode launch/test settings when regenerating the project.
+if not (scheme/(APP_NAME+'.xcscheme')).exists():
+    (scheme/(APP_NAME+'.xcscheme')).write_text(f'''<?xml version="1.0" encoding="UTF-8"?>
+<Scheme LastUpgradeVersion="2630" version="1.3"><BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES"><BuildActionEntries><BuildActionEntry buildForTesting="YES" buildForRunning="YES" buildForProfiling="YES" buildForArchiving="YES" buildForAnalyzing="YES"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="{target}" BuildableName="{APP_NAME}.app" BlueprintName="{APP_NAME}" ReferencedContainer="container:{APP_NAME}.xcodeproj"/></BuildActionEntry></BuildActionEntries></BuildAction><LaunchAction buildConfiguration="Debug" selectedDebuggerIdentifier="Xcode.DebuggerFoundation.Debugger.LLDB" selectedLauncherIdentifier="Xcode.DebuggerFoundation.Launcher.LLDB" launchStyle="0" useCustomWorkingDirectory="NO" ignoresPersistentStateOnLaunch="NO" debugDocumentVersioning="YES" debugServiceExtension="internal" allowLocationSimulation="YES"><BuildableProductRunnable runnableDebuggingMode="0"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="{target}" BuildableName="{APP_NAME}.app" BlueprintName="{APP_NAME}" ReferencedContainer="container:{APP_NAME}.xcodeproj"/></BuildableProductRunnable></LaunchAction><ProfileAction buildConfiguration="Release" shouldUseLaunchSchemeArgsEnv="YES" savedToolIdentifier="" useCustomWorkingDirectory="NO" debugDocumentVersioning="YES"><BuildableProductRunnable runnableDebuggingMode="0"><BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="{target}" BuildableName="{APP_NAME}.app" BlueprintName="{APP_NAME}" ReferencedContainer="container:{APP_NAME}.xcodeproj"/></BuildableProductRunnable></ProfileAction><AnalyzeAction buildConfiguration="Debug"/><ArchiveAction buildConfiguration="Release" revealArchiveInOrganizer="YES"/></Scheme>''')
+info=dict(CFBundleDisplayName=APP_NAME,CFBundleName='$(PRODUCT_NAME)',CFBundleIdentifier='$(PRODUCT_BUNDLE_IDENTIFIER)',CFBundleExecutable='$(EXECUTABLE_NAME)',CFBundlePackageType='APPL',CFBundleShortVersionString='$(MARKETING_VERSION)',CFBundleVersion='$(CURRENT_PROJECT_VERSION)',LSRequiresIPhoneOS=True,UILaunchScreen={},UIRequiredDeviceCapabilities=['arm64'],UIBackgroundModes=['location'],UISupportedInterfaceOrientations=['UIInterfaceOrientationPortrait'],**{'UISupportedInterfaceOrientations~ipad':['UIInterfaceOrientationPortrait','UIInterfaceOrientationPortraitUpsideDown','UIInterfaceOrientationLandscapeLeft','UIInterfaceOrientationLandscapeRight']},NSLocationWhenInUseUsageDescription='Altiscope 使用精确位置记录你的轨迹、速度和海拔，开始记录后会在锁屏期间继续定位。',NSMotionUsageDescription='Altiscope 保存加速度与姿态，供轨迹回看和可选实验惯导使用。')
 with (root/'App/Resources/Info.plist').open('wb') as f: plistlib.dump(info,f)
 privacy=dict(NSPrivacyTracking=False,NSPrivacyTrackingDomains=[],NSPrivacyCollectedDataTypes=[],NSPrivacyAccessedAPITypes=[dict(NSPrivacyAccessedAPIType='NSPrivacyAccessedAPICategoryUserDefaults',NSPrivacyAccessedAPITypeReasons=['CA92.1'])])
 with (root/'App/Resources/PrivacyInfo.xcprivacy').open('wb') as f: plistlib.dump(privacy,f)
-print(f'Generated {APP_NAME}.xcodeproj; Google={google.exists()}, AMap={amap_exists}')
+print(f'Generated {APP_NAME}.xcodeproj; Apple MapKit + offline canvas')

@@ -1,0 +1,132 @@
+[0/1] Planning build
+Building for debugging...
+[0/5] Write sources
+[2/5] Write swift-version--58304C5D6DBC2206.txt
+[4/7] Compiling AltiscopeCore RouteScene.swift
+[5/7] Emitting module AltiscopeCore
+[6/8] Compiling AltiscopeCore RouteDisplay.swift
+[7/11] Compiling AltiscopeCoreTests RouteSceneTests.swift
+[8/11] Emitting module AltiscopeCoreTests
+[9/11] Compiling AltiscopeCoreTests LocalFlightVerificationTests.swift
+[9/11] Write Objects.LinkFileList
+[10/11] Linking AltiscopeCorePackageTests
+Build complete! (2.80s)
+Test Suite 'All tests' started at 2026-10-03 15:55:32.510.
+Test Suite 'AltiscopeCorePackageTests.xctest' started at 2026-10-03 15:55:32.513.
+Test Suite 'CoordinateTransformTests' started at 2026-10-03 15:55:32.513.
+Test Case '-[AltiscopeCoreTests.CoordinateTransformTests testUncertainBoundaryIsNotGuessedAndTaggedValuesAreNotDoubleConverted]' started.
+Test Case '-[AltiscopeCoreTests.CoordinateTransformTests testUncertainBoundaryIsNotGuessedAndTaggedValuesAreNotDoubleConverted]' passed (0.004 seconds).
+Test Case '-[AltiscopeCoreTests.CoordinateTransformTests testUpstreamExamplesAndLongitudeLatitudeOrder]' started.
+Test Case '-[AltiscopeCoreTests.CoordinateTransformTests testUpstreamExamplesAndLongitudeLatitudeOrder]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.CoordinateTransformTests testUpstreamRectangleEdgesDoNotClaimGeographicBoundary]' started.
+Test Case '-[AltiscopeCoreTests.CoordinateTransformTests testUpstreamRectangleEdgesDoNotClaimGeographicBoundary]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.CoordinateTransformTests testVerifiedRegionGateExcludesHongKongMacauTaiwanAndForeignPoints]' started.
+Test Case '-[AltiscopeCoreTests.CoordinateTransformTests testVerifiedRegionGateExcludesHongKongMacauTaiwanAndForeignPoints]' passed (0.000 seconds).
+Test Suite 'CoordinateTransformTests' passed at 2026-10-03 15:55:32.518.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+Test Suite 'LocalFlightVerificationTests' started at 2026-10-03 15:55:32.518.
+Test Case '-[AltiscopeCoreTests.LocalFlightVerificationTests testUserFlightImportsWithAllAltitudesAndSegments]' started.
+Test Case '-[AltiscopeCoreTests.LocalFlightVerificationTests testUserFlightImportsWithAllAltitudesAndSegments]' passed (3.911 seconds).
+Test Suite 'LocalFlightVerificationTests' passed at 2026-10-03 15:55:36.429.
+	 Executed 1 test, with 0 failures (0 unexpected) in 3.911 (3.911) seconds
+Test Suite 'NavigationTests' started at 2026-10-03 15:55:36.429.
+Test Case '-[AltiscopeCoreTests.NavigationTests testBearingUsesPreviousVelocityBeforeCompassAndHandlesNorthBoundary]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testBearingUsesPreviousVelocityBeforeCompassAndHandlesNorthBoundary]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.NavigationTests testFiveSecondChecksRejectReusedFixesAndTeleport]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testFiveSecondChecksRejectReusedFixesAndTeleport]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.NavigationTests testPauseMissingAttitudeAndMotionGapNeverBridgePrediction]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testPauseMissingAttitudeAndMotionGapNeverBridgePrediction]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.NavigationTests testRotationTransposeAndENUAxisOrder]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testRotationTransposeAndENUAxisOrder]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.NavigationTests testScalarSpeedCannotInventVelocityAndPartialGPSFieldsRemainIndependent]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testScalarSpeedCannotInventVelocityAndPartialGPSFieldsRemainIndependent]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.NavigationTests testStationaryReplayDoesNotMoveWithoutAcceleration]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testStationaryReplayDoesNotMoveWithoutAcceleration]' passed (0.001 seconds).
+Test Case '-[AltiscopeCoreTests.NavigationTests testStraightReplayAndBoundedLossOfSignal]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testStraightReplayAndBoundedLossOfSignal]' passed (0.002 seconds).
+Test Case '-[AltiscopeCoreTests.NavigationTests testSystemObservationValidityDoesNotDiscardIndependentFields]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testSystemObservationValidityDoesNotDiscardIndependentFields]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.NavigationTests testWallClockJumpDoesNotChangeMonotonicIntegration]' started.
+Test Case '-[AltiscopeCoreTests.NavigationTests testWallClockJumpDoesNotChangeMonotonicIntegration]' passed (0.000 seconds).
+Test Suite 'NavigationTests' passed at 2026-10-03 15:55:36.433.
+	 Executed 9 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'RecordingTests' started at 2026-10-03 15:55:36.433.
+Test Case '-[AltiscopeCoreTests.RecordingTests testDisplaySamplingPreservesSegmentBoundariesAndOriginalData]' started.
+Test Case '-[AltiscopeCoreTests.RecordingTests testDisplaySamplingPreservesSegmentBoundariesAndOriginalData]' passed (0.021 seconds).
+Test Case '-[AltiscopeCoreTests.RecordingTests testDistanceAtEquatorAndDateline]' started.
+Test Case '-[AltiscopeCoreTests.RecordingTests testDistanceAtEquatorAndDateline]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RecordingTests testJournalSurvivesTruncatedTailAndCanResume]' started.
+Test Case '-[AltiscopeCoreTests.RecordingTests testJournalSurvivesTruncatedTailAndCanResume]' passed (0.012 seconds).
+Test Case '-[AltiscopeCoreTests.RecordingTests testPauseExcludesTimeAndDistanceAndCreatesSeparateGPXSegments]' started.
+Test Case '-[AltiscopeCoreTests.RecordingTests testPauseExcludesTimeAndDistanceAndCreatesSeparateGPXSegments]' passed (0.002 seconds).
+Test Case '-[AltiscopeCoreTests.RecordingTests testRejectsInvalidStaleOutOfOrderAndTeleportFixes]' started.
+Test Case '-[AltiscopeCoreTests.RecordingTests testRejectsInvalidStaleOutOfOrderAndTeleportFixes]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RecordingTests testSignalGapCreatesSegmentWithoutAddingDistance]' started.
+Test Case '-[AltiscopeCoreTests.RecordingTests testSignalGapCreatesSegmentWithoutAddingDistance]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RecordingTests testSlowWalkingAccumulatesRatherThanDiscardingEverySmallStep]' started.
+Test Case '-[AltiscopeCoreTests.RecordingTests testSlowWalkingAccumulatesRatherThanDiscardingEverySmallStep]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RecordingTests testUnknownMeasurementsRemainMissingAndDemoIsExplicit]' started.
+Test Case '-[AltiscopeCoreTests.RecordingTests testUnknownMeasurementsRemainMissingAndDemoIsExplicit]' passed (0.000 seconds).
+Test Suite 'RecordingTests' passed at 2026-10-03 15:55:36.469.
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.035 (0.036) seconds
+Test Suite 'RouteSceneTests' started at 2026-10-03 15:55:36.469.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testCalibratedXYZMatchesKnownCameraAcrossRotationPitchZoomAndViewport]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testCalibratedXYZMatchesKnownCameraAcrossRotationPitchZoomAndViewport]' passed (0.010 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testDatelineUsesShortProjectionAndPreservesEstimatedSource]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testDatelineUsesShortProjectionAndPreservesEstimatedSource]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testHeightExaggerationIsUniformAndNeverChangesAltitudeReadings]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testHeightExaggerationIsUniformAndNeverChangesAltitudeReadings]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testInvalidProjectionAndVerticesBehindCameraDoNotMakeVisibleGeometry]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testInvalidProjectionAndVerticesBehindCameraDoNotMakeVisibleGeometry]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testLongSpiralDisplayRetainsAltitudeExtremaAndDoesNotAlterSource]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testLongSpiralDisplayRetainsAltitudeExtremaAndDoesNotAlterSource]' passed (0.042 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testMissingHeightAndPausesBreakBothMainLineAndCurtain]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testMissingHeightAndPausesBreakBothMainLineAndCurtain]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testMSLZeroClimbDescentAndNegativeHeightRemainAbsolute]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testMSLZeroClimbDescentAndNegativeHeightRemainAbsolute]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testOverviewContainsGroundAndHeightAndStopsOnceFitted]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testOverviewContainsGroundAndHeightAndStopsOnceFitted]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testOverviewTranslationDoesNotNeedlesslyZoomOut]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testOverviewTranslationDoesNotNeedlesslyZoomOut]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testOverviewZoomsInWhenFlightOccupiesOnlySmallPartOfAvailableMap]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testOverviewZoomsInWhenFlightOccupiesOnlySmallPartOfAvailableMap]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testSamplingKeepsSharpPlanViewTurnAndUnchangedRawCount]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testSamplingKeepsSharpPlanViewTurnAndUnchangedRawCount]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testSyntheticAltitudePreviewIsIsolatedAndHasEveryBoundary]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testSyntheticAltitudePreviewIsIsolatedAndHasEveryBoundary]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testZeroCrossingSplitsCurtainWithoutChangingRecordedPoints]' started.
+Test Case '-[AltiscopeCoreTests.RouteSceneTests testZeroCrossingSplitsCurtainWithoutChangingRecordedPoints]' passed (0.000 seconds).
+Test Suite 'RouteSceneTests' passed at 2026-10-03 15:55:36.523.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.053 (0.054) seconds
+Test Suite 'TrackFormatTests' started at 2026-10-03 15:55:36.523.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testHeaderEditAndDeletePreserveOtherRecordsAndSampleBytes]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testHeaderEditAndDeletePreserveOtherRecordsAndSampleBytes]' passed (0.008 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testImportCopiesIDsDoesNotResumeRecordingAndRollsBackFailure]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testImportCopiesIDsDoesNotResumeRecordingAndRollsBackFailure]' passed (0.007 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testJSONJSONLAndGPXRoundTripPreserveNullsProvenanceAndSegments]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testJSONJSONLAndGPXRoundTripPreserveNullsProvenanceAndSegments]' passed (0.011 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testLegacyJSONAndJSONLEventsMigrateWithBackup]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testLegacyJSONAndJSONLEventsMigrateWithBackup]' passed (0.004 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testLongHeaderRewriteFailureDoesNotReplaceExistingFile]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testLongHeaderRewriteFailureDoesNotReplaceExistingFile]' passed (5.255 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testMalformedMiddleLineNotSilentlySkippedAndOnlyIncompleteTailRecovered]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testMalformedMiddleLineNotSilentlySkippedAndOnlyIncompleteTailRecovered]' passed (0.007 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testMissingPositionBreaksMapAndDistanceEvenWithinOneSourceSegment]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testMissingPositionBreaksMapAndDistanceEvenWithinOneSourceSegment]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testPlainMultiTrackGPXAndRouteDoNotInventTimesOrInertialValues]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testPlainMultiTrackGPXAndRouteDoNotInventTimesOrInertialValues]' passed (0.000 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testRejectsXMLExternalEntitiesInvalidCoordinatesVersionsAndConflictingProjection]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testRejectsXMLExternalEntitiesInvalidCoordinatesVersionsAndConflictingProjection]' passed (0.004 seconds).
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testUnitConversionsArePhysicalAndAltitudeUnknownIsDistinct]' started.
+Test Case '-[AltiscopeCoreTests.TrackFormatTests testUnitConversionsArePhysicalAndAltitudeUnknownIsDistinct]' passed (0.000 seconds).
+Test Suite 'TrackFormatTests' passed at 2026-10-03 15:55:41.821.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 5.297 (5.298) seconds
+Test Suite 'AltiscopeCorePackageTests.xctest' passed at 2026-10-03 15:55:41.821.
+	 Executed 45 tests, with 0 failures (0 unexpected) in 9.305 (9.308) seconds
+Test Suite 'All tests' passed at 2026-10-03 15:55:41.821.
+	 Executed 45 tests, with 0 failures (0 unexpected) in 9.305 (9.311) seconds
+REAL_FLIGHT points=6297 vertices=4365 edges=4362
+◇ Test run started.
+↳ Testing Library Version: 1501
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

@@ -1,0 +1,9 @@
+{
+  "repeatedGenerationIdentical": true,
+  "sha256": {
+    "Altiscope.xcodeproj/project.pbxproj": "c16909c12f60d3a7fcc7129af493fff8f91e0a95098c2688c2b09df9a7c4dc5b",
+    "App/Resources/Info.plist": "2aaaea1299976c422fe37eeb0ce25ae6ca7f08169f47a2e42ec86c4ce66445b5",
+    "App/Resources/PrivacyInfo.xcprivacy": "3e4a93cbe86acef7dd7e063a28c849992f556e7f52cadc5f37c1e8b0e1b54686",
+    "Altiscope.xcodeproj/xcshareddata/xcschemes/Altiscope.xcscheme": "29fc52a1094fa248b9f8f38824c6723281dc8fd2eb882df5e436baa438ed8efb"
+  }
+}

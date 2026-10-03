@@ -1,7 +1,59 @@
-.build/
-build/
+# macOS and editor-local state
 .DS_Store
-Config/Secrets.xcconfig
+.AppleDouble
+._*
+.idea/
+.vscode/
+*.swp
+*~
+
+# Xcode / Swift build products and user state
+.build/
+.swiftpm/
+build/
+DerivedData/
+Archives/
+*.xcarchive/
+*.xcresult/
+*.ipa
+*.app/
+*.dSYM/
+*.dSYM.zip
 *.xcuserstate
 xcuserdata/
-Vendor/
+
+# Local credentials and signing. Keep the distributable template.
+/Config/Secrets*.xcconfig
+!/Config/Secrets.example.xcconfig
+/Config/*.local.xcconfig
+.env
+.env.*
+!.env.example
+*.p8
+*.p12
+*.pfx
+*.pem
+*.key
+*.mobileprovision
+*.provisionprofile
+
+# Unused downloaded SDKs; the app only links system frameworks.
+/Vendor/
+
+# Private journeys, exports, backups and local scratch work.
+/Private/
+/LocalData/
+/Exports/
+/Backups/
+/.work/
+/Altiscope-*.json
+/Altiscope-*.jsonl
+/Altiscope-*.gpx
+*.recovery-backup
+*.legacy-backup
+
+# Generated logs, except intentionally archived validation evidence.
+*.log
+!/Documentation/Validation/**/*.log
+__pycache__/
+*.py[cod]

@@ -1,0 +1,4 @@
+Documentation/Formats/synthetic-track.gpx validates
+GPX schema source: https://www.topografix.com/GPX/1/1/gpx.xsd
+GPX schema SHA256: 9e4d1988b862edbe556305b130f8f6f1b29864fefd0dc02d5dab04ccdd1f34d6
+JSON / JSONL / GPX: 4 navigation samples preserved by fixture generator; full semantic round trips covered in core-tests.log.

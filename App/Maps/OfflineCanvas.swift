@@ -5,6 +5,10 @@ struct OfflineCanvas: View {
     var points: [TrackPoint]
     var heading: Double?
     var resetToken: Int
+    var current: Coordinate?
+    var follow: Bool
+    var userMoved: () -> Void
+    @State private var viewportPoints: [TrackPoint] = []
     @State private var zoom: CGFloat = 1
     @State private var pan: CGSize = .zero
     @GestureState private var gestureZoom: CGFloat = 1
@@ -12,7 +16,7 @@ struct OfflineCanvas: View {
 
     var body: some View {
         GeometryReader { geometry in
-            let projection = CanvasProjection(points: points, size: geometry.size)
+            let projection = CanvasProjection(points: viewportPoints, size: geometry.size)
             Canvas { context, size in
                 context.fill(Path(CGRect(origin: .zero, size: size)), with: .color(Color(hex: 0x10151C)))
                 var grid = Path()
@@ -30,15 +34,15 @@ struct OfflineCanvas: View {
                     return CGPoint(x: (p.x-center.x)*scale+center.x+pan.width+gesturePan.width,
                                    y: (p.y-center.y)*scale+center.y+pan.height+gesturePan.height)
                 }
-                var path = Path()
-                var segment: Int?
-                for point in points {
-                    let p = position(point.coordinate)
-                    if segment != point.segment { path.move(to: p) } else { path.addLine(to: p) }
-                    segment = point.segment
+                for (a, b) in zip(points, points.dropFirst()) where a.segment == b.segment {
+                    var path = Path(); path.move(to: position(a.coordinate)); path.addLine(to: position(b.coordinate))
+                    context.stroke(path, with: .color(Color(hex: RouteAltitudeStyle.colorHex(b.altitude))),
+                                   style: StrokeStyle(lineWidth: 3.5, lineCap: .round, dash: a.estimated == true || b.estimated == true ? [6,4] : []))
                 }
-                context.stroke(path, with: .color(Theme.purple.opacity(0.16)), style: StrokeStyle(lineWidth: 16, lineCap: .round, lineJoin: .round))
-                context.stroke(path, with: .color(Theme.accent), style: StrokeStyle(lineWidth: 3.5, lineCap: .round, lineJoin: .round))
+                if let current {
+                    let p = position(current)
+                    context.fill(Path(ellipseIn: CGRect(x: p.x-7, y: p.y-7, width: 14, height: 14)), with: .color(.cyan))
+                }
                 if let first = points.first {
                     let p = position(first.coordinate)
                     context.fill(Path(ellipseIn: CGRect(x: p.x-5,y:p.y-5,width:10,height:10)), with: .color(Theme.mint))
@@ -58,7 +62,7 @@ struct OfflineCanvas: View {
                 }.padding(14)
             }
             .overlay {
-                if points.isEmpty {
+                if points.isEmpty && current == nil {
                     VStack(spacing: 15) {
                         Image(systemName:"location.north.circle").font(.system(size:48,weight:.ultraLight)).foregroundStyle(Theme.accent)
                         Text("每一段旅程，都有迹可循。").font(.system(size:15,weight:.medium))
@@ -68,9 +72,16 @@ struct OfflineCanvas: View {
             }
             .clipped()
             .gesture(MagnifyGesture().updating($gestureZoom) { v,s,_ in s = v.magnification }.onEnded { zoom = min(20,max(0.5,zoom*$0.magnification)) })
-            .simultaneousGesture(DragGesture().updating($gesturePan) { v,s,_ in s = v.translation }.onEnded { pan.width += $0.translation.width; pan.height += $0.translation.height })
-            .onChange(of: resetToken) { _,_ in zoom = 1; pan = .zero }
+            .simultaneousGesture(DragGesture().onChanged { _ in userMoved() }.updating($gesturePan) { v,s,_ in s = v.translation }.onEnded { pan.width += $0.translation.width; pan.height += $0.translation.height })
+            .onAppear { updateViewport() }
+            .onChange(of: resetToken) { _,_ in updateViewport(); zoom = 1; pan = .zero }
+            .onChange(of: current) { _,_ in if follow { updateViewport() } }
         }.accessibilityLabel("离线轨迹画布，\(points.count) 个定位点，可拖动及双指缩放")
+    }
+    private func updateViewport() {
+        if follow, let coordinate = current ?? points.last?.coordinate {
+            viewportPoints = [TrackPoint(timestamp: nil, coordinate: coordinate)]
+        } else { viewportPoints = points }
     }
 }
 
